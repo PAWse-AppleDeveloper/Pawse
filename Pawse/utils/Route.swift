@@ -1,0 +1,30 @@
+//
+//  Route.swift
+//  Pawse
+//
+//  Created by hendra on 22/06/24.
+//
+
+import Foundation
+import SwiftUI
+
+enum PawseRoute: String, Hashable {
+    case Login
+    case Home
+}
+
+class Route: ObservableObject {
+    @Published var pawsePath = NavigationPath()
+    
+    func navigate(pawseRoute: PawseRoute) {
+        pawsePath.append(pawseRoute)
+    }
+    
+    func popToRoot(){
+        pawsePath.removeLast(pawsePath.count)
+    }
+    
+    func pop()  {
+        pawsePath.removeLast()
+    }
+}
