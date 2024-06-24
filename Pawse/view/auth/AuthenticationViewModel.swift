@@ -22,11 +22,14 @@ class AuthenticationViewModel: ObservableObject {
     @Published var user: User?
     @Published var authenticationState: AuthenticationState = .unauthenticated
     
+    private var profileService:ProfileService
+    
     private var currentNonce: String?
     
     private var authStateHandler: AuthStateDidChangeListenerHandle?
     
     init() {
+        self.profileService = ProfileService()
         registerAuthStateHandler()
         verifySignInWithAppleAuthenticationState()
     }
@@ -50,9 +53,8 @@ class AuthenticationViewModel: ObservableObject {
               let credentialState = try await appleIDProvider.credentialState(forUserID: appleProviderData.uid)
               switch credentialState {
               case .authorized:
-                break // The Apple ID credential is valid.
+                break
               case .revoked, .notFound:
-                // The Apple ID credential is either revoked or was not found, so show the sign-in UI.
                 self.signOut()
               default:
                 break
@@ -63,8 +65,6 @@ class AuthenticationViewModel: ObservableObject {
           }
         }
       }
-
-    
     
     func handleSignInWithAppleRequest(_ request: ASAuthorizationAppleIDRequest) {
         request.requestedScopes = [.fullName, .email]
@@ -75,7 +75,10 @@ class AuthenticationViewModel: ObservableObject {
     
     func handleSignInWithAppleCompletion(_ result: Result<ASAuthorization, Error>) {
         if case .failure(let failure) = result {
-            errorMessage = failure.localizedDescription
+            DispatchQueue.main.async {
+                print(failure.localizedDescription)
+                self.errorMessage = failure.localizedDescription
+            }
         }
         else if case .success(let success) = result {
             if let appleIDCredential = success.credential as? ASAuthorizationAppleIDCredential {
@@ -96,12 +99,33 @@ class AuthenticationViewModel: ObservableObject {
                 Task {
                     do {
                         let result = try await Auth.auth().signIn(with: credential)
+                        let username = result.user.email!.components(separatedBy: "@").first ?? ""
+                        try await checkAndCreateProfile(userId: result.user.uid, username: username)
                         await updateDisplayName(for: result.user, with: appleIDCredential)
                     } catch {
-                        print("Error authenticating: \(error.localizedDescription)")
+                        print("Error authenticating: \(error)")
                     }
                 }
             }
+        }
+    }
+    
+    private func checkAndCreateProfile(userId: String, username: String) async throws {
+        let result = await profileService.getProfile(userId: userId)
+        switch result {
+        case .success(let profile):
+            print("Profile already exists: \(profile)")
+        case .notFound:
+            let newProfile = Profile(userId: userId, username: username, coin: 0)
+            do {
+                try profileService.saveProfile(profile: newProfile, userId: userId)
+            } catch {
+                print("Error saving new profile: \(error.localizedDescription)")
+                throw error
+            }
+        case .failure(let error):
+            print("Error fetching profile: \(error.localizedDescription)")
+            throw error
         }
     }
     
@@ -116,8 +140,10 @@ class AuthenticationViewModel: ObservableObject {
                 self.displayName = Auth.auth().currentUser?.displayName ?? ""
             }
             catch {
-                print("Unable to update the user's displayname: \(error.localizedDescription)")
-                errorMessage = error.localizedDescription
+                DispatchQueue.main.async {
+                    print("Unable to update the user's displayname: \(error.localizedDescription)")
+                    self.errorMessage = error.localizedDescription
+                }
             }
         }
     }

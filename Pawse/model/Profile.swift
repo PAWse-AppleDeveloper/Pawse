@@ -14,6 +14,14 @@ struct Profile: Codable, Identifiable {
     var userId: String
     var username: String
     var coin: Int
+    
+    enum CodingKeys: String, CodingKey
+    {
+        case id
+        case userId = "user_id"
+        case username
+        case coin
+    }
 }
 
 extension Profile {

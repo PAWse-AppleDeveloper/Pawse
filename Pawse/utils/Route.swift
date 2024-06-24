@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-enum PawseRoute: String, Hashable {
+enum PawseRoute: String, Hashable, Codable {
     case Login
     case Home
 }
