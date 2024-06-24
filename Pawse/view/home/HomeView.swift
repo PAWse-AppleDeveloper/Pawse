@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
-//    @EnvironmentObject var authViewModel: AuthenticationViewModel
-//    @EnvironmentObject var route: Route
+    @EnvironmentObject var authViewModel: AuthenticationViewModel
+    @EnvironmentObject var route: Route
     var body: some View {
         VStack {
             CatView()
