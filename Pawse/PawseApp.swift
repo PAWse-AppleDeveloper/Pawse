@@ -7,6 +7,7 @@
 
 import SwiftUI
 import FirebaseCore
+import Speech
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
@@ -22,11 +23,32 @@ struct PawseApp: App {
     @StateObject private var authViewModel = AuthenticationViewModel()
     @StateObject private var route = Route()
     
+    init() {
+        requestSpeechAuthorization()
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
                 .environmentObject(authViewModel)
                 .environmentObject(route)
+        }
+    }
+    
+    func requestSpeechAuthorization() {
+        SFSpeechRecognizer.requestAuthorization { authStatus in
+            switch authStatus {
+            case .authorized:
+                print("Speech recognition authorized")
+            case .denied:
+                print("Speech recognition denied")
+            case .restricted:
+                print("Speech recognition restricted")
+            case .notDetermined:
+                print("Speech recognition not determined")
+            @unknown default:
+                print("Unknown status")
+            }
         }
     }
 }

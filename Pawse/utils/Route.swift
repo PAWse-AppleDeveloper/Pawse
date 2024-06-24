@@ -11,6 +11,9 @@ import SwiftUI
 enum PawseRoute: String, Hashable, Codable {
     case Login
     case Home
+    case Journal
+    case JournalResult
+    
 }
 
 class Route: ObservableObject {

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct ContentView: View {
     @EnvironmentObject var authViewModel: AuthenticationViewModel
-    @EnvironmentObject var route: Route
     
     var body: some View {
         Group {
@@ -17,13 +16,11 @@ struct ContentView: View {
             case .authenticating:
                 Text("Loading...")
             case .authenticated:
-                HomeView()
+                MoodView()
                     .environmentObject(authViewModel)
-                    .environmentObject(route)
             case .unauthenticated:
                 SignInView()
                     .environmentObject(authViewModel)
-                    .environmentObject(route)
             }
         }
     }

@@ -13,7 +13,7 @@ class QuestService {
     private var tableName = "quest"
     
     func saveQuest(quest: Quest) throws {
-        try db.collection(tableName).document(quest.userId).setData(from: quest)
+        try db.collection(tableName).document().setData(from: quest)
     }
     
     func createAutoQuests(type: QuestType, userId: String, storyId: String) throws {

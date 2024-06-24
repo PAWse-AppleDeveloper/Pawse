@@ -9,11 +9,17 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-struct UserQuest: String, Codable {
+struct UserQuest: Codable, Identifiable {
     @DocumentID var id: String?
     var questId: String
     var userId: String
     var storyId: String
-    var progress: Int = 0
-    
+    var progress: Int
+    enum CodingKeys: String, CodingKey {
+        case id
+        case questId = "quest_id"
+        case userId = "user_id"
+        case storyId = "story_id"
+        case progress
+    }
 }

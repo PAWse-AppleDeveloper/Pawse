@@ -29,7 +29,6 @@ struct Quest: Codable, Identifiable {
         case name
         case type
         case navigation
-        case date
         case exp
         case duration
     }
@@ -53,14 +52,14 @@ extension Quest {
       case .anger:
           return [
               Quest(name: "Drawing", type: .anger, navigation: .Home, exp: 1, duration: 300),
-              Quest(storyId: storyId, userId: userId, name: "Shouting", type: .anger, navigation: .Home, date: currentDate, exp: 1, duration: 300),
-              Quest(storyId: storyId, userId: userId, name: "Punching", type: .anger, navigation: .Home, date: currentDate, exp: 1, duration: 300)
+              Quest(name: "Shouting", type: .anger, navigation: .Home, exp: 1, duration: 300),
+              Quest(name: "Punching", type: .anger, navigation: .Home, exp: 1, duration: 300)
           ]
       case .anxiety:
           return [
-              Quest(storyId: storyId, userId: userId, name: "Meditation", type: .anxiety, navigation: .Home, date: currentDate, exp: 1, duration: 300, isCompleted: false),
-              Quest(storyId: storyId, userId: userId, name: "Challenges", type: .anxiety, navigation: .Home, date: currentDate, exp: 1, duration: 300, isCompleted: false),
-              Quest(storyId: storyId, userId: userId, name: "Journaling", type: .anxiety, navigation: .Home, date: currentDate, exp: 1, duration: 300, isCompleted: false)
+              Quest(name: "Meditation", type: .anxiety, navigation: .Home, exp: 1, duration: 300),
+              Quest(name: "Challenges", type: .anxiety, navigation: .Home, exp: 1, duration: 300),
+              Quest(name: "Journaling", type: .anxiety, navigation: .Home, exp: 1, duration: 300)
           ]
       }
   }
