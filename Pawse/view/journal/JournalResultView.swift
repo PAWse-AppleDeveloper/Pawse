@@ -48,10 +48,11 @@ struct JournalResultView: View {
     @State private var sliderValue: Double = 7.0
     @State private var prompt = ""
     @State private var emotion = ""
+    @State private var navigateToMoodView = false
+    @ObservedObject private var journalViewModel = JournalViewModel()
     let model = GenerativeModel(name: "gemini-pro", apiKey: APIKey.default)
 
     var body: some View {
-        NavigationStack{
         if !emotion.isEmpty{
             VStack{
                 Text("You are feeling..")
@@ -97,7 +98,9 @@ struct JournalResultView: View {
                 .padding()
                 Spacer()
                 VStack {
-                    NavigationLink(destination: ContentView()){
+                    Button(action: {
+                        saveJournalAndNavigate()
+                    }) {
                         Text("Next")
                             .fontWeight(.semibold)
                             .frame(maxWidth: .infinity)
@@ -106,8 +109,7 @@ struct JournalResultView: View {
                             .foregroundColor(.white)
                             .cornerRadius(8)
                     }
-                    
-                .frame(maxWidth: .infinity)
+                    .frame(maxWidth: .infinity)
                     HStack{
                         Rectangle()
                             .fill(Color.abu)
@@ -122,13 +124,15 @@ struct JournalResultView: View {
                 }
                 .padding()
             }
+            .navigationDestination(isPresented: $navigateToMoodView) {
+                MoodView()
+            }
         } else {
             LoadingView()
                 .onAppear{
                     analyze()
                 }
         }
-    }
 }
     
     private func analyze(){
@@ -144,6 +148,18 @@ struct JournalResultView: View {
           }
         }
     }
+    
+    private func saveJournalAndNavigate() {
+        let story = Story(confidenceLevel: Int(sliderValue), emotion: emotion, story: jurnal)
+            journalViewModel.saveStory(story: story) { result in
+                switch result {
+                case .success:
+                    navigateToMoodView = true
+                case .failure(let error):
+                    print("Error saving journal: \(error)")
+                }
+            }
+        }
 }
 
 struct LoadingView: View {

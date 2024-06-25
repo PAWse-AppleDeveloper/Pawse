@@ -12,16 +12,32 @@ class StoryService {
     private var db = Firestore.firestore()
     private var tableName = "story"
     
-    func saveStory(story: Story, userId: String) throws {
-        try db.collection(tableName).document(userId).setData(from: story)
+    func saveStory(story: Story, completion: @escaping (Result<Story, Error>) -> Void) {
+        var storyWithID = story
+        let documentRef = db.collection(tableName).document()
+        storyWithID.id = documentRef.documentID
+        
+        do {
+            try documentRef.setData(from: storyWithID) { error in
+                if let error = error {
+                    print("Error saving story: \(error.localizedDescription)")
+                    completion(.failure(error))
+                } else {
+                    print("Story successfully saved!")
+                    completion(.success(storyWithID))
+                }
+            }
+        } catch {
+            print("Error serializing story: \(error.localizedDescription)")
+            completion(.failure(error))
+        }
     }
     
-    func getLatestTodayStory(userId: String, completion: @escaping (Story?, Error?) -> Void) {
+    func getLatestTodayStory(completion: @escaping (Story?, Error?) -> Void) {
         let currentDate = Date()
         let startOfDay = Calendar.current.startOfDay(for: currentDate)
         let endOfDay = Calendar.current.date(byAdding: .day, value: 1, to: startOfDay)!
         db.collection(tableName)
-            .whereField("user_id", isEqualTo: userId)
             .whereField("date", isGreaterThanOrEqualTo: startOfDay)
             .whereField("date", isLessThan: endOfDay)
             .order(by: "date", descending: true)

@@ -14,6 +14,18 @@
 		23502DA12C295F4600D7F42A /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23502DA02C295F4600D7F42A /* APIKey.swift */; };
 		23502DA32C295F9F00D7F42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23502DA22C295F9F00D7F42A /* Assets.xcassets */; };
 		23502DA52C2968CB00D7F42A /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23502DA42C2968CB00D7F42A /* GenerativeAI-Info.plist */; };
+		235DC40F2C29C77B004F5F64 /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DC40E2C29C77B004F5F64 /* JournalViewModel.swift */; };
+		235DC4112C29CE74004F5F64 /* MoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DC4102C29CE74004F5F64 /* MoodViewModel.swift */; };
+		235DC4162C2A6E2A004F5F64 /* DrawView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DC4152C2A6E2A004F5F64 /* DrawView.swift */; };
+		235DC4182C2A6EC7004F5F64 /* Shader.metal in Sources */ = {isa = PBXBuildFile; fileRef = 235DC4172C2A6EC7004F5F64 /* Shader.metal */; };
+		235DC41A2C2A81EE004F5F64 /* DrawLottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DC4192C2A81EE004F5F64 /* DrawLottieView.swift */; };
+		235DC41C2C2A8299004F5F64 /* nangis-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 235DC41B2C2A8299004F5F64 /* nangis-2.json */; };
+		235DC41E2C2A82A3004F5F64 /* Marah-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 235DC41D2C2A82A3004F5F64 /* Marah-2.json */; };
+		235DC4202C2A82EA004F5F64 /* cemas-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 235DC41F2C2A82EA004F5F64 /* cemas-2.json */; };
+		235DC4222C2A85B1004F5F64 /* lukis.json in Resources */ = {isa = PBXBuildFile; fileRef = 235DC4212C2A85B1004F5F64 /* lukis.json */; };
+		235DC4272C2AA15A004F5F64 /* ShoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DC4262C2AA15A004F5F64 /* ShoutView.swift */; };
+		235DC4292C2AA161004F5F64 /* PunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DC4282C2AA161004F5F64 /* PunchView.swift */; };
+		235DC42B2C2AA589004F5F64 /* DrawViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DC42A2C2AA589004F5F64 /* DrawViewModel.swift */; };
 		237BC7812C25BD710065225C /* PawseApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237BC7802C25BD710065225C /* PawseApp.swift */; };
 		237BC7832C25BD710065225C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237BC7822C25BD710065225C /* ContentView.swift */; };
 		237BC7882C25BD730065225C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 237BC7872C25BD730065225C /* Preview Assets.xcassets */; };
@@ -39,7 +51,6 @@
 		23ECD65A2C29184900DD013F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23ECD6592C29184900DD013F /* GoogleService-Info.plist */; };
 		23ECD65C2C291C9A00DD013F /* QuestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECD65B2C291C9A00DD013F /* QuestService.swift */; };
 		23ECD65F2C291DAF00DD013F /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECD65E2C291DAF00DD013F /* JournalView.swift */; };
-		23ECD6612C291E2200DD013F /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECD6602C291E2200DD013F /* JournalViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +59,18 @@
 		23502DA02C295F4600D7F42A /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
 		23502DA22C295F9F00D7F42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../SpeechAI/SpeechAI/Assets.xcassets; sourceTree = "<group>"; };
 		23502DA42C2968CB00D7F42A /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
+		235DC40E2C29C77B004F5F64 /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
+		235DC4102C29CE74004F5F64 /* MoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewModel.swift; sourceTree = "<group>"; };
+		235DC4152C2A6E2A004F5F64 /* DrawView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawView.swift; sourceTree = "<group>"; };
+		235DC4172C2A6EC7004F5F64 /* Shader.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = Shader.metal; sourceTree = "<group>"; };
+		235DC4192C2A81EE004F5F64 /* DrawLottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawLottieView.swift; sourceTree = "<group>"; };
+		235DC41B2C2A8299004F5F64 /* nangis-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "nangis-2.json"; sourceTree = "<group>"; };
+		235DC41D2C2A82A3004F5F64 /* Marah-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Marah-2.json"; sourceTree = "<group>"; };
+		235DC41F2C2A82EA004F5F64 /* cemas-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cemas-2.json"; sourceTree = "<group>"; };
+		235DC4212C2A85B1004F5F64 /* lukis.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lukis.json; sourceTree = "<group>"; };
+		235DC4262C2AA15A004F5F64 /* ShoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoutView.swift; sourceTree = "<group>"; };
+		235DC4282C2AA161004F5F64 /* PunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchView.swift; sourceTree = "<group>"; };
+		235DC42A2C2AA589004F5F64 /* DrawViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewModel.swift; sourceTree = "<group>"; };
 		237BC77D2C25BD710065225C /* Pawse.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pawse.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		237BC7802C25BD710065225C /* PawseApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PawseApp.swift; sourceTree = "<group>"; };
 		237BC7822C25BD710065225C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -67,7 +90,6 @@
 		23ECD6592C29184900DD013F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		23ECD65B2C291C9A00DD013F /* QuestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestService.swift; sourceTree = "<group>"; };
 		23ECD65E2C291DAF00DD013F /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
-		23ECD6602C291E2200DD013F /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +119,33 @@
 				23502DA02C295F4600D7F42A /* APIKey.swift */,
 			);
 			path = config;
+			sourceTree = "<group>";
+		};
+		235DC4132C2A6DC8004F5F64 /* sad */ = {
+			isa = PBXGroup;
+			children = (
+				235DC4142C2A6E1A004F5F64 /* draw */,
+			);
+			path = sad;
+			sourceTree = "<group>";
+		};
+		235DC4142C2A6E1A004F5F64 /* draw */ = {
+			isa = PBXGroup;
+			children = (
+				235DC4152C2A6E2A004F5F64 /* DrawView.swift */,
+				235DC4192C2A81EE004F5F64 /* DrawLottieView.swift */,
+				235DC42A2C2AA589004F5F64 /* DrawViewModel.swift */,
+			);
+			path = draw;
+			sourceTree = "<group>";
+		};
+		235DC4232C2AA11D004F5F64 /* anger */ = {
+			isa = PBXGroup;
+			children = (
+				235DC4262C2AA15A004F5F64 /* ShoutView.swift */,
+				235DC4282C2AA161004F5F64 /* PunchView.swift */,
+			);
+			path = anger;
 			sourceTree = "<group>";
 		};
 		237BC7742C25BD710065225C = {
@@ -129,7 +178,12 @@
 				237BC7802C25BD710065225C /* PawseApp.swift */,
 				237BC7822C25BD710065225C /* ContentView.swift */,
 				23502DA22C295F9F00D7F42A /* Assets.xcassets */,
+				235DC4212C2A85B1004F5F64 /* lukis.json */,
+				235DC41F2C2A82EA004F5F64 /* cemas-2.json */,
+				235DC41D2C2A82A3004F5F64 /* Marah-2.json */,
+				235DC41B2C2A8299004F5F64 /* nangis-2.json */,
 				237BC7862C25BD730065225C /* Preview Content */,
+				235DC4172C2A6EC7004F5F64 /* Shader.metal */,
 			);
 			path = Pawse;
 			sourceTree = "<group>";
@@ -156,7 +210,10 @@
 		237BC7A72C269C130065225C /* mood */ = {
 			isa = PBXGroup;
 			children = (
+				235DC4232C2AA11D004F5F64 /* anger */,
+				235DC4132C2A6DC8004F5F64 /* sad */,
 				237BC7A82C269C1F0065225C /* MoodView.swift */,
+				235DC4102C29CE74004F5F64 /* MoodViewModel.swift */,
 			);
 			path = mood;
 			sourceTree = "<group>";
@@ -212,8 +269,8 @@
 			isa = PBXGroup;
 			children = (
 				23ECD65E2C291DAF00DD013F /* JournalView.swift */,
-				23ECD6602C291E2200DD013F /* JournalViewModel.swift */,
 				23502D9D2C295E0B00D7F42A /* JournalResultView.swift */,
+				235DC40E2C29C77B004F5F64 /* JournalViewModel.swift */,
 			);
 			path = journal;
 			sourceTree = "<group>";
@@ -293,10 +350,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				235DC41C2C2A8299004F5F64 /* nangis-2.json in Resources */,
 				237BC7882C25BD730065225C /* Preview Assets.xcassets in Resources */,
+				235DC4222C2A85B1004F5F64 /* lukis.json in Resources */,
 				23502DA32C295F9F00D7F42A /* Assets.xcassets in Resources */,
 				23502DA52C2968CB00D7F42A /* GenerativeAI-Info.plist in Resources */,
+				235DC41E2C2A82A3004F5F64 /* Marah-2.json in Resources */,
 				23ECD65A2C29184900DD013F /* GoogleService-Info.plist in Resources */,
+				235DC4202C2A82EA004F5F64 /* cemas-2.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -308,21 +369,28 @@
 			buildActionMask = 2147483647;
 			files = (
 				23ECD65C2C291C9A00DD013F /* QuestService.swift in Sources */,
+				235DC4292C2AA161004F5F64 /* PunchView.swift in Sources */,
 				23502DA12C295F4600D7F42A /* APIKey.swift in Sources */,
+				235DC4162C2A6E2A004F5F64 /* DrawView.swift in Sources */,
 				237BC7832C25BD710065225C /* ContentView.swift in Sources */,
+				235DC4182C2A6EC7004F5F64 /* Shader.metal in Sources */,
 				23ECD6552C26F78300DD013F /* Profile.swift in Sources */,
 				23502D9E2C295E0B00D7F42A /* JournalResultView.swift in Sources */,
 				23502D9C2C295D4700D7F42A /* SpeechRecognizer.swift in Sources */,
+				235DC4272C2AA15A004F5F64 /* ShoutView.swift in Sources */,
 				237BC7812C25BD710065225C /* PawseApp.swift in Sources */,
 				23ECD6532C26F74D00DD013F /* ProfileService.swift in Sources */,
+				235DC42B2C2AA589004F5F64 /* DrawViewModel.swift in Sources */,
+				235DC41A2C2A81EE004F5F64 /* DrawLottieView.swift in Sources */,
 				23AA9E2D2C294D5400F18AF8 /* UserQuest.swift in Sources */,
+				235DC4112C29CE74004F5F64 /* MoodViewModel.swift in Sources */,
 				237BC7A62C2695580065225C /* SignInView.swift in Sources */,
-				23ECD6612C291E2200DD013F /* JournalViewModel.swift in Sources */,
 				23CB32B22C2951B7003C20E8 /* ProfileView.swift in Sources */,
 				237BC7AC2C269C7B0065225C /* Route.swift in Sources */,
 				23ECD6582C26FA0E00DD013F /* Quest.swift in Sources */,
 				23ECD64B2C26ED2100DD013F /* StoryService.swift in Sources */,
 				23ECD65F2C291DAF00DD013F /* JournalView.swift in Sources */,
+				235DC40F2C29C77B004F5F64 /* JournalViewModel.swift in Sources */,
 				237BC7A92C269C1F0065225C /* MoodView.swift in Sources */,
 				237BC7A42C268EFB0065225C /* AuthenticationViewModel.swift in Sources */,
 				23ECD64E2C26EF3000DD013F /* Story.swift in Sources */,

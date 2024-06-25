@@ -15,11 +15,13 @@ struct UserQuest: Codable, Identifiable {
     var userId: String
     var storyId: String
     var progress: Int
+    var isCompleted: Bool
     enum CodingKeys: String, CodingKey {
         case id
         case questId = "quest_id"
         case userId = "user_id"
         case storyId = "story_id"
         case progress
+        case isCompleted = "is_completed"
     }
 }

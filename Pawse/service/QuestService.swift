@@ -16,30 +16,42 @@ class QuestService {
         try db.collection(tableName).document().setData(from: quest)
     }
     
-    func createAutoQuests(type: QuestType, userId: String, storyId: String) throws {
-        let quests = Quest.quests(for: type, userId: userId, storyId: storyId)
+    func createAutoQuests(type: QuestType, storyId: String) throws {
+        let quests = Quest.quests(for: type, storyId: storyId)
         for quest in quests {
             try saveQuest(quest: quest)
         }
     }
-    
-    func getCurrentQuests(for date: Date, userId: String, storyId: String, completion: @escaping ([Quest]?, Error?) -> Void) {
+
+    func getCurrentQuests(for date: Date = Date(), storyId: String, completion: @escaping ([Quest]?, Error?) -> Void) {
         let calendar = Calendar.current
         let startOfDay = calendar.startOfDay(for: date)
         let endOfDay = calendar.date(byAdding: .day, value: 1, to: startOfDay)!
         
         db.collection(tableName)
-            .document(userId)
-            .collection("userQuests")
             .whereField("story_id", isEqualTo: storyId)
             .whereField("date", isGreaterThanOrEqualTo: startOfDay)
             .whereField("date", isLessThan: endOfDay)
             .getDocuments { (querySnapshot, error) in
                 if let error = error {
+                    print("Error fetching documents: \(error)")
                     completion(nil, error)
                 } else {
+                    if let documents = querySnapshot?.documents {
+                        print("Number of documents fetched: \(documents.count)")
+                    } else {
+                        print("No documents found")
+                    }
+                    
                     let quests = querySnapshot?.documents.compactMap { document in
-                        try? document.data(as: Quest.self)
+                        do {
+                            let quest = try document.data(as: Quest.self)
+                            print("Fetched quest: \(quest)")
+                            return quest
+                        } catch let decodeError {
+                            print("Error decoding document \(document.documentID): \(decodeError)")
+                            return nil
+                        }
                     }
                     completion(quests, nil)
                 }

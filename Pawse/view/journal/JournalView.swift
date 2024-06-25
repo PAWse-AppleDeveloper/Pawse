@@ -9,8 +9,6 @@ import SwiftUI
 import Speech
 
 struct JournalView: View {
-    @EnvironmentObject var authViewModel: AuthenticationViewModel
-    @StateObject private var storyViewModel = StoryViewModel()
     @ObservedObject var speechRecognizer = SpeechRecognizer()
     @State private var jurnal: String = ""
     @State private var isRecord: Bool = false

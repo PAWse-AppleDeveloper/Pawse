@@ -9,15 +9,29 @@ import SwiftUI
 import Speech
 
 struct MoodView: View {
-    @EnvironmentObject var authViewModel: AuthenticationViewModel
-//    @EnvironmentObject var route: Route
+    @ObservedObject private var moodViewModel = MoodViewModel()
     
     var body: some View {
-        NavigationStack {
+        
+        VStack {
             Text("Home")
-            NavigationLink(destination: JournalView().environmentObject(authViewModel)) {
-                Text("HAHAHA")
+            NavigationLink(destination: JournalView()) {
+                Text(moodViewModel.currentStory?.emotion ?? "nice")
             }
+            
+            if let quests = moodViewModel.quests {
+                List(quests) { quest in
+                    NavigationLink(destination: destinationView(for: quest)) {
+                        Text(quest.name)
+                    }
+                }
+            } else {
+                Text("Loading quests...")
+            }
+        }
+        .onAppear {
+            moodViewModel.getLatestEmotion()
+        }
 
 //            Navigation from Home
 //            .navigationDestination(for: PawseRoute.self) { route in
@@ -25,7 +39,6 @@ struct MoodView: View {
 //                case
 //                }
 //            }
-        }
     }
     
     func requestSpeechAuthorization() {
@@ -42,6 +55,19 @@ struct MoodView: View {
             @unknown default:
                 print("Unknown status")
             }
+        }
+    }
+    @ViewBuilder
+    private func destinationView(for quest: Quest) -> some View {
+        switch quest.navigation {
+        case "Draw":
+            DrawLottieView()
+        case "Shout":
+            ShoutView()
+        case "Punch":
+            PunchView()
+        default:
+            Text("Unknown destination")
         }
     }
 }

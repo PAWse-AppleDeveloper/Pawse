@@ -15,11 +15,19 @@ struct Story: Codable, Identifiable {
     var confidenceLevel: Int
     var emotion: String
     var story: String
-    var userId: String
+    
+    enum CodingKeys: String, CodingKey
+    {
+        case id
+        case date
+        case confidenceLevel = "confidence_level"
+        case emotion
+        case story
+    }
 }
 
 extension Story {
   static var empty: Story {
-      Story(confidenceLevel: 1, emotion: "", story: "", userId: "")
+      Story(confidenceLevel: 0, emotion: "", story: "")
   }
 }

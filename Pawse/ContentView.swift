@@ -8,19 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var authViewModel: AuthenticationViewModel
+//    @EnvironmentObject var authViewModel: AuthenticationViewModel
     
     var body: some View {
         Group {
-            switch (authViewModel.authenticationState) {
-            case .authenticating:
-                Text("Loading...")
-            case .authenticated:
+            NavigationStack {
                 MoodView()
-                    .environmentObject(authViewModel)
-            case .unauthenticated:
-                SignInView()
-                    .environmentObject(authViewModel)
             }
         }
     }
