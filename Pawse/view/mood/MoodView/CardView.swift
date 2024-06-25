@@ -55,6 +55,27 @@ struct CardView: View {
     }
 }
 
+struct DisabledCardView: View {
+    var body: some View {
+        HStack(alignment: .center, spacing: 24) {
+            Image(systemName: "lock.fill")
+                .font(.system(size: 36))
+            Text("Please start journaling to unlock your quest!")
+                .font(.system(size: 17))
+                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+              .foregroundColor(Color(red: 0.24, green: 0.26, blue: 0.31))
+              .frame(maxWidth: .infinity, alignment: .topLeading)
+        }
+        .padding(.horizontal, 24)
+        .padding(.vertical, 16)
+        .frame(width: 396, alignment: .leading)
+        .background(Color(red: 0.96, green: 0.95, blue: 0.93))
+        .cornerRadius(25)
+        .opacity(0.7)
+    }
+}
+
+
 #Preview {
     CardView()
 }
