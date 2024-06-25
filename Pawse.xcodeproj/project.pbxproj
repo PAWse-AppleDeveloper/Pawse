@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		160B305C2C2AAB620011E6D7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 160B305B2C2AAB620011E6D7 /* Lottie */; };
+		160B30632C2AAC530011E6D7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B305D2C2AAC530011E6D7 /* CardView.swift */; };
+		160B30642C2AAC530011E6D7 /* CatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B305E2C2AAC530011E6D7 /* CatView.swift */; };
+		160B30652C2AAC530011E6D7 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B305F2C2AAC530011E6D7 /* LottieView.swift */; };
+		160B30662C2AAC530011E6D7 /* MoodView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B30602C2AAC530011E6D7 /* MoodView.swift */; };
+		160B30672C2AAC530011E6D7 /* QuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B30612C2AAC530011E6D7 /* QuestView.swift */; };
+		160B306B2C2AAC910011E6D7 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B30682C2AAC910011E6D7 /* ShopView.swift */; };
+		160B306C2C2AAC910011E6D7 /* SongCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B30692C2AAC910011E6D7 /* SongCardView.swift */; };
 		23502D962C295A1600D7F42A /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D952C295A1600D7F42A /* GoogleGenerativeAI */; };
 		23502D9A2C295C3700D7F42A /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D992C295C3700D7F42A /* DotLottie */; };
 		23502D9C2C295D4700D7F42A /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */; };
@@ -54,6 +62,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		160B305D2C2AAC530011E6D7 /* CardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		160B305E2C2AAC530011E6D7 /* CatView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CatView.swift; sourceTree = "<group>"; };
+		160B305F2C2AAC530011E6D7 /* LottieView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		160B30602C2AAC530011E6D7 /* MoodView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MoodView.swift; sourceTree = "<group>"; };
+		160B30612C2AAC530011E6D7 /* QuestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestView.swift; sourceTree = "<group>"; };
+		160B30682C2AAC910011E6D7 /* ShopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
+		160B30692C2AAC910011E6D7 /* SongCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCardView.swift; sourceTree = "<group>"; };
 		23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		23502D9D2C295E0B00D7F42A /* JournalResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalResultView.swift; sourceTree = "<group>"; };
 		23502DA02C295F4600D7F42A /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
@@ -103,6 +118,7 @@
 				237BC7982C266F850065225C /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				237BC7962C266F850065225C /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				237BC79A2C266F850065225C /* FirebaseAuth in Frameworks */,
+				160B305C2C2AAB620011E6D7 /* Lottie in Frameworks */,
 				23502D962C295A1600D7F42A /* GoogleGenerativeAI in Frameworks */,
 				237BC7A02C266F850065225C /* FirebaseFirestore in Frameworks */,
 				23ECD6502C26F02A00DD013F /* FirebaseFirestoreSwift in Frameworks */,
@@ -113,6 +129,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		160B30622C2AAC530011E6D7 /* MoodView */ = {
+			isa = PBXGroup;
+			children = (
+				160B305D2C2AAC530011E6D7 /* CardView.swift */,
+				160B305E2C2AAC530011E6D7 /* CatView.swift */,
+				160B305F2C2AAC530011E6D7 /* LottieView.swift */,
+				160B30602C2AAC530011E6D7 /* MoodView.swift */,
+				160B30612C2AAC530011E6D7 /* QuestView.swift */,
+			);
+			path = MoodView;
+			sourceTree = "<group>";
+		};
+		160B306A2C2AAC910011E6D7 /* ShopView */ = {
+			isa = PBXGroup;
+			children = (
+				160B30682C2AAC910011E6D7 /* ShopView.swift */,
+				160B30692C2AAC910011E6D7 /* SongCardView.swift */,
+			);
+			path = ShopView;
+			sourceTree = "<group>";
+		};
 		23502D9F2C295F3C00D7F42A /* config */ = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +236,7 @@
 		237BC7A22C268EE70065225C /* view */ = {
 			isa = PBXGroup;
 			children = (
+				160B306A2C2AAC910011E6D7 /* ShopView */,
 				23ECD65D2C291D9E00DD013F /* journal */,
 				23ECD6562C26F9B600DD013F /* profile */,
 				23ECD6482C26EB8100DD013F /* auth */,
@@ -210,6 +248,7 @@
 		237BC7A72C269C130065225C /* mood */ = {
 			isa = PBXGroup;
 			children = (
+				160B30622C2AAC530011E6D7 /* MoodView */,
 				235DC4232C2AA11D004F5F64 /* anger */,
 				235DC4132C2A6DC8004F5F64 /* sad */,
 				237BC7A82C269C1F0065225C /* MoodView.swift */,
@@ -302,6 +341,7 @@
 				23ECD64F2C26F02A00DD013F /* FirebaseFirestoreSwift */,
 				23502D952C295A1600D7F42A /* GoogleGenerativeAI */,
 				23502D992C295C3700D7F42A /* DotLottie */,
+				160B305B2C2AAB620011E6D7 /* Lottie */,
 			);
 			productName = Pawse;
 			productReference = 237BC77D2C25BD710065225C /* Pawse.app */;
@@ -335,6 +375,7 @@
 				237BC7922C266F850065225C /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				23502D942C295A1600D7F42A /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
 				23502D982C295C3700D7F42A /* XCRemoteSwiftPackageReference "dotlottie-ios" */,
+				160B305A2C2AAB620011E6D7 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 237BC77E2C25BD710065225C /* Products */;
 			projectDirPath = "";
@@ -368,7 +409,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				160B30652C2AAC530011E6D7 /* LottieView.swift in Sources */,
 				23ECD65C2C291C9A00DD013F /* QuestService.swift in Sources */,
+				160B30632C2AAC530011E6D7 /* CardView.swift in Sources */,
 				235DC4292C2AA161004F5F64 /* PunchView.swift in Sources */,
 				23502DA12C295F4600D7F42A /* APIKey.swift in Sources */,
 				235DC4162C2A6E2A004F5F64 /* DrawView.swift in Sources */,
@@ -385,14 +428,19 @@
 				23AA9E2D2C294D5400F18AF8 /* UserQuest.swift in Sources */,
 				235DC4112C29CE74004F5F64 /* MoodViewModel.swift in Sources */,
 				237BC7A62C2695580065225C /* SignInView.swift in Sources */,
+				160B30662C2AAC530011E6D7 /* MoodView.swift in Sources */,
+				160B30672C2AAC530011E6D7 /* QuestView.swift in Sources */,
 				23CB32B22C2951B7003C20E8 /* ProfileView.swift in Sources */,
 				237BC7AC2C269C7B0065225C /* Route.swift in Sources */,
 				23ECD6582C26FA0E00DD013F /* Quest.swift in Sources */,
 				23ECD64B2C26ED2100DD013F /* StoryService.swift in Sources */,
+				160B306C2C2AAC910011E6D7 /* SongCardView.swift in Sources */,
 				23ECD65F2C291DAF00DD013F /* JournalView.swift in Sources */,
+				160B30642C2AAC530011E6D7 /* CatView.swift in Sources */,
 				235DC40F2C29C77B004F5F64 /* JournalViewModel.swift in Sources */,
 				237BC7A92C269C1F0065225C /* MoodView.swift in Sources */,
 				237BC7A42C268EFB0065225C /* AuthenticationViewModel.swift in Sources */,
+				160B306B2C2AAC910011E6D7 /* ShopView.swift in Sources */,
 				23ECD64E2C26EF3000DD013F /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -611,6 +659,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		160B305A2C2AAB620011E6D7 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.4.3;
+			};
+		};
 		23502D942C295A1600D7F42A /* XCRemoteSwiftPackageReference "generative-ai-swift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/google-gemini/generative-ai-swift.git";
@@ -638,6 +694,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		160B305B2C2AAB620011E6D7 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 160B305A2C2AAB620011E6D7 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		23502D952C295A1600D7F42A /* GoogleGenerativeAI */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 23502D942C295A1600D7F42A /* XCRemoteSwiftPackageReference "generative-ai-swift" */;
