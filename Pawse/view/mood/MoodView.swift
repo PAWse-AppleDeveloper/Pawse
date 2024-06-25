@@ -61,7 +61,7 @@ struct MoodView: View {
     private func destinationView(for quest: Quest) -> some View {
         switch quest.navigation {
         case "Draw":
-            DrawLottieView()
+            DrawLottieView(quest: quest)
         case "Shout":
             ShoutView()
         case "Punch":

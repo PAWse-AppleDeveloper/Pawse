@@ -16,6 +16,23 @@ class QuestService {
         try db.collection(tableName).document().setData(from: quest)
     }
     
+    func updateQuest(quest: Quest, completion: @escaping (Result<Void, Error>) -> Void) {
+        do {
+            try db.collection(tableName).document(quest.id!).setData(from: quest, merge: true) { error in
+                if let error = error {
+                    print("Error saving quest: \(error.localizedDescription)")
+                    completion(.failure(error))
+                } else {
+                    print("Quest successfully saved!")
+                    completion(.success(()))
+                }
+            }
+        } catch {
+            print("Error serializing story: \(error.localizedDescription)")
+            completion(.failure(error))
+        }
+    }
+    
     func createAutoQuests(type: QuestType, storyId: String) throws {
         let quests = Quest.quests(for: type, storyId: storyId)
         for quest in quests {

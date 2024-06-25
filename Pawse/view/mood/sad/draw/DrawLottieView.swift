@@ -9,6 +9,7 @@ import SwiftUI
 import DotLottie
 
 struct DrawLottieView: View {
+    let quest: Quest
     var body: some View {
         VStack {
             DotLottieAnimation(
@@ -28,7 +29,7 @@ struct DrawLottieView: View {
                 .multilineTextAlignment(.center)
                 .padding([.leading, .trailing], 60)
             Spacer()
-            NavigationLink(destination: DrawView(), label: {
+            NavigationLink(destination: DrawView(quest: quest), label: {
                 Text("Start")
                     .foregroundStyle(.white)
                     .frame(minWidth: 180, minHeight: 60)
@@ -42,6 +43,6 @@ struct DrawLottieView: View {
     }
 }
 
-#Preview {
-    DrawLottieView()
-}
+//#Preview {
+//    DrawLottieView()
+//}

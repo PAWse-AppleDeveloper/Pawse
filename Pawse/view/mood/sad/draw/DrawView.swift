@@ -14,12 +14,15 @@ struct Line {
 }
 
 struct DrawView: View {
-    
+    let quest: Quest
     @State private var currentLine = Line()
     @State private var lines: [Line] = []
     @State private var replacement: Color = .black
     @State private var timerRunning = true
-    @State private var timeRemaining = 600
+    @State private var timeRemaining = 2
+    
+    
+    @ObservedObject private var drawViewModel = DrawViewModel()
     
     var body: some View {
         NavigationStack {
@@ -69,7 +72,9 @@ struct DrawView: View {
                         .progressViewStyle(LinearProgressViewStyle(tint: .blue))
                         .padding()
                 } else {
-                    NavigationLink(destination: MoodView()) {
+                    Button {
+                        saveQuestAndNavigate()
+                    } label: {
                         Text("Done")
                             .foregroundStyle(.white)
                             .padding()
@@ -77,8 +82,14 @@ struct DrawView: View {
                             .background(.green)
                             .cornerRadius(16)
                     }
-                    .padding()
+//                    NavigationLink(destination: MoodView()) {
+//
+//                    }
+//                    .padding()
                 }
+            }
+            .navigationDestination(isPresented: $drawViewModel.navigateToMoodView) {
+                MoodView()
             }
             .onAppear(perform: startTimer)
             .toolbar(content: {
@@ -114,8 +125,15 @@ struct DrawView: View {
         let seconds = totalSeconds % 60
         return String(format: "%02d:%02d", minutes, seconds)
     }
+    
+    private func saveQuestAndNavigate() {
+        drawViewModel.completeQuest(quest: quest)
+    }
 }
+    
 
-#Preview {
-    DrawView()
+struct DrawView_Previews: PreviewProvider {
+    static var previews: some View {
+        DrawView(quest: .empty)
+    }
 }

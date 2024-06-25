@@ -23,6 +23,7 @@ struct Quest: Codable, Identifiable {
     var navigation: String
     var exp: Int
     var duration: Int
+    var isCompleted: Bool
     var storyId: String
     
     enum CodingKeys: String, CodingKey
@@ -34,13 +35,14 @@ struct Quest: Codable, Identifiable {
         case navigation
         case exp
         case duration
+        case isCompleted = "is_completed"
         case storyId = "story_id"
     }
 }
 
 extension Quest {
   static var empty: Quest {
-      Quest(date: Date(), name: "", type: .Sad, navigation: "", exp: 5, duration: 300, storyId: "")
+      Quest(date: Date(), name: "", type: .Sad, navigation: "", exp: 5, duration: 300, isCompleted: false, storyId: "")
   }
     
     static func quests(for type: QuestType, storyId: String) -> [Quest] {
@@ -48,21 +50,21 @@ extension Quest {
       switch type {
       case .Sad:
           return [
-            Quest(date: currentDate,name: "Sharing", type: .Sad, navigation: "", exp: 1, duration: 300, storyId: storyId),
-            Quest(date: currentDate,name: "Drawing", type: .Sad, navigation: "", exp: 1, duration: 300, storyId: storyId),
-            Quest(date: currentDate,name: "Journaling", type: .Sad, navigation: "", exp: 1, duration: 300, storyId: storyId)
+            Quest(date: currentDate,name: "Sharing", type: .Sad, navigation: "", exp: 1, duration: 300, isCompleted: false, storyId: storyId),
+            Quest(date: currentDate,name: "Drawing", type: .Sad, navigation: "", exp: 1, duration: 300, isCompleted: false, storyId: storyId),
+            Quest(date: currentDate,name: "Journaling", type: .Sad, navigation: "", exp: 1, duration: 300, isCompleted: false, storyId: storyId)
           ]
       case .Angry:
           return [
-            Quest(date: currentDate,name: "Drawing", type: .Angry, navigation: "Draw", exp: 1, duration: 300, storyId: storyId),
-            Quest(date: currentDate,name: "Shouting", type: .Angry, navigation: "Shout", exp: 1, duration: 300, storyId: storyId),
-            Quest(date: currentDate,name: "Punching", type: .Angry, navigation: "Punch", exp: 1, duration: 300, storyId: storyId)
+            Quest(date: currentDate,name: "Drawing", type: .Angry, navigation: "Draw", exp: 1, duration: 300, isCompleted: false, storyId: storyId),
+            Quest(date: currentDate,name: "Shouting", type: .Angry, navigation: "Shout", exp: 1, duration: 300, isCompleted: false, storyId: storyId),
+            Quest(date: currentDate,name: "Punching", type: .Angry, navigation: "Punch", exp: 1, duration: 300, isCompleted: false, storyId: storyId)
           ]
       case .Anxiety:
           return [
-            Quest(date: currentDate,name: "Meditation", type: .Anxiety, navigation: "", exp: 1, duration: 300, storyId: storyId),
-            Quest(date: currentDate,name: "Challenges", type: .Anxiety, navigation: "", exp: 1, duration: 300, storyId: storyId),
-            Quest(date: currentDate,name: "Journaling", type: .Anxiety, navigation: "", exp: 1, duration: 300, storyId: storyId)
+            Quest(date: currentDate,name: "Meditation", type: .Anxiety, navigation: "", exp: 1, duration: 300, isCompleted: false, storyId: storyId),
+            Quest(date: currentDate,name: "Challenges", type: .Anxiety, navigation: "", exp: 1, duration: 300, isCompleted: false, storyId: storyId),
+            Quest(date: currentDate,name: "Journaling", type: .Anxiety, navigation: "", exp: 1, duration: 300, isCompleted: false, storyId: storyId)
           ]
       }
   }
