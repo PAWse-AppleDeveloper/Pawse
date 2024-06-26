@@ -15,12 +15,17 @@
 		160B30672C2AAC530011E6D7 /* QuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B30612C2AAC530011E6D7 /* QuestView.swift */; };
 		160B306B2C2AAC910011E6D7 /* ShopView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B30682C2AAC910011E6D7 /* ShopView.swift */; };
 		160B306C2C2AAC910011E6D7 /* SongCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B30692C2AAC910011E6D7 /* SongCardView.swift */; };
+		16DD30122C2C6A2F004681A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 16DD30112C2C6A2F004681A2 /* Assets.xcassets */; };
+		16DD30142C2C6FFA004681A2 /* Song.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DD30132C2C6FFA004681A2 /* Song.swift */; };
+		16DD30162C2C702F004681A2 /* SongViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16DD30152C2C702F004681A2 /* SongViewModel.swift */; };
+		16DD301A2C2C71D6004681A2 /* Gymnopede.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16DD30172C2C71D5004681A2 /* Gymnopede.mp3 */; };
+		16DD301B2C2C71D6004681A2 /* Weightless.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16DD30182C2C71D5004681A2 /* Weightless.mp3 */; };
+		16DD301C2C2C71D6004681A2 /* Spiegel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16DD30192C2C71D6004681A2 /* Spiegel.mp3 */; };
 		23502D962C295A1600D7F42A /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D952C295A1600D7F42A /* GoogleGenerativeAI */; };
 		23502D9A2C295C3700D7F42A /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D992C295C3700D7F42A /* DotLottie */; };
 		23502D9C2C295D4700D7F42A /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */; };
 		23502D9E2C295E0B00D7F42A /* JournalResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23502D9D2C295E0B00D7F42A /* JournalResultView.swift */; };
 		23502DA12C295F4600D7F42A /* APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23502DA02C295F4600D7F42A /* APIKey.swift */; };
-		23502DA32C295F9F00D7F42A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23502DA22C295F9F00D7F42A /* Assets.xcassets */; };
 		23502DA52C2968CB00D7F42A /* GenerativeAI-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23502DA42C2968CB00D7F42A /* GenerativeAI-Info.plist */; };
 		235DC40F2C29C77B004F5F64 /* JournalViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DC40E2C29C77B004F5F64 /* JournalViewModel.swift */; };
 		235DC4112C29CE74004F5F64 /* MoodViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DC4102C29CE74004F5F64 /* MoodViewModel.swift */; };
@@ -75,10 +80,15 @@
 		160B30612C2AAC530011E6D7 /* QuestView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestView.swift; sourceTree = "<group>"; };
 		160B30682C2AAC910011E6D7 /* ShopView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopView.swift; sourceTree = "<group>"; };
 		160B30692C2AAC910011E6D7 /* SongCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SongCardView.swift; sourceTree = "<group>"; };
+		16DD30112C2C6A2F004681A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		16DD30132C2C6FFA004681A2 /* Song.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Song.swift; sourceTree = "<group>"; };
+		16DD30152C2C702F004681A2 /* SongViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongViewModel.swift; sourceTree = "<group>"; };
+		16DD30172C2C71D5004681A2 /* Gymnopede.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Gymnopede.mp3; sourceTree = "<group>"; };
+		16DD30182C2C71D5004681A2 /* Weightless.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Weightless.mp3; sourceTree = "<group>"; };
+		16DD30192C2C71D6004681A2 /* Spiegel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Spiegel.mp3; sourceTree = "<group>"; };
 		23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		23502D9D2C295E0B00D7F42A /* JournalResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalResultView.swift; sourceTree = "<group>"; };
 		23502DA02C295F4600D7F42A /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
-		23502DA22C295F9F00D7F42A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../SpeechAI/SpeechAI/Assets.xcassets; sourceTree = "<group>"; };
 		23502DA42C2968CB00D7F42A /* GenerativeAI-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GenerativeAI-Info.plist"; sourceTree = "<group>"; };
 		235DC40E2C29C77B004F5F64 /* JournalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalViewModel.swift; sourceTree = "<group>"; };
 		235DC4102C29CE74004F5F64 /* MoodViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoodViewModel.swift; sourceTree = "<group>"; };
@@ -158,8 +168,12 @@
 		160B306A2C2AAC910011E6D7 /* ShopView */ = {
 			isa = PBXGroup;
 			children = (
+				16DD30172C2C71D5004681A2 /* Gymnopede.mp3 */,
+				16DD30192C2C71D6004681A2 /* Spiegel.mp3 */,
+				16DD30182C2C71D5004681A2 /* Weightless.mp3 */,
 				160B30682C2AAC910011E6D7 /* ShopView.swift */,
 				160B30692C2AAC910011E6D7 /* SongCardView.swift */,
+				16DD30152C2C702F004681A2 /* SongViewModel.swift */,
 			);
 			path = ShopView;
 			sourceTree = "<group>";
@@ -239,7 +253,7 @@
 				237BC7822C25BD710065225C /* ContentView.swift */,
 				23913EA42C2C3A42008A576F /* congratulations.json */,
 				23913EA82C2C4826008A576F /* assets */,
-				23502DA22C295F9F00D7F42A /* Assets.xcassets */,
+				16DD30112C2C6A2F004681A2 /* Assets.xcassets */,
 				237BC7862C25BD730065225C /* Preview Content */,
 				235DC4172C2A6EC7004F5F64 /* Shader.metal */,
 			);
@@ -329,6 +343,7 @@
 				23ECD6542C26F78300DD013F /* User.swift */,
 				23ECD6572C26FA0E00DD013F /* Quest.swift */,
 				23AA9E2C2C294D5400F18AF8 /* UserQuest.swift */,
+				16DD30132C2C6FFA004681A2 /* Song.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -428,13 +443,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				235DC41C2C2A8299004F5F64 /* nangis-2.json in Resources */,
+				16DD301B2C2C71D6004681A2 /* Weightless.mp3 in Resources */,
 				237BC7882C25BD730065225C /* Preview Assets.xcassets in Resources */,
 				235DC4222C2A85B1004F5F64 /* lukis.json in Resources */,
-				23502DA32C295F9F00D7F42A /* Assets.xcassets in Resources */,
 				23502DA52C2968CB00D7F42A /* GenerativeAI-Info.plist in Resources */,
+				16DD301A2C2C71D6004681A2 /* Gymnopede.mp3 in Resources */,
 				23913EA52C2C3A42008A576F /* congratulations.json in Resources */,
+				16DD30122C2C6A2F004681A2 /* Assets.xcassets in Resources */,
 				235DC41E2C2A82A3004F5F64 /* Marah-2.json in Resources */,
 				23913EA12C2C3A32008A576F /* cemas homepage.json in Resources */,
+				16DD301C2C2C71D6004681A2 /* Spiegel.mp3 in Resources */,
 				23913E9F2C2C3A24008A576F /* marah homepage.json in Resources */,
 				235DC4202C2A82EA004F5F64 /* cemas-2.json in Resources */,
 				23913EA32C2C3A38008A576F /* sedih homepage.json in Resources */,
@@ -462,6 +480,7 @@
 				23ECD6552C26F78300DD013F /* User.swift in Sources */,
 				23502D9E2C295E0B00D7F42A /* JournalResultView.swift in Sources */,
 				23502D9C2C295D4700D7F42A /* SpeechRecognizer.swift in Sources */,
+				16DD30162C2C702F004681A2 /* SongViewModel.swift in Sources */,
 				235DC4272C2AA15A004F5F64 /* ShoutView.swift in Sources */,
 				237BC7812C25BD710065225C /* PawseApp.swift in Sources */,
 				23ECD6532C26F74D00DD013F /* ProfileService.swift in Sources */,
@@ -485,6 +504,7 @@
 				237BC7A42C268EFB0065225C /* AuthenticationViewModel.swift in Sources */,
 				160B306B2C2AAC910011E6D7 /* ShopView.swift in Sources */,
 				23ECD64E2C26EF3000DD013F /* Story.swift in Sources */,
+				16DD30142C2C6FFA004681A2 /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

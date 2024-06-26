@@ -8,30 +8,27 @@
 import SwiftUI
 
 struct ShopView: View {
+    @StateObject private var viewModel = SongViewModel()
+    
     var body: some View {
         VStack(alignment: .leading) {
             Text("Shop")
                 .font(.title)
                 .fontWeight(.bold)
-                .padding(.leading) // Apply padding to align with the content below
+                .padding(.leading)
             
             ScrollView {
                 VStack(alignment: .leading, spacing: 24) {
-                    SongCardView()
-                    SongCardView()
-                    SongCardView()
-                    SongCardView()
-                    SongCardView()
-                    SongCardView()
-                    SongCardView()
-                    SongCardView()
-                    SongCardView()
+                    ForEach(viewModel.songs) { song in
+                        SongCardView(viewModel: viewModel, song: song)
+                    }
                 }
-                .padding() // Add padding to the VStack for better spacing
+                .padding()
             }
         }
     }
 }
+
 #Preview {
     ShopView()
 }
