@@ -10,9 +10,28 @@ import Foundation
 class MoodViewModel: ObservableObject {
     @Published var currentStory: Story?
     @Published var quests: [Quest]?
+    @Published var profile: Profile?
     
     private var storyService = StoryService()
     private var questService = QuestService()
+    private var profileService = ProfileService()
+    
+    init() {
+        fetchProfile()
+    }
+    
+    private func fetchProfile() {
+        profileService.getProfile { result in
+            switch result {
+            case .success(let profile):
+                DispatchQueue.main.async {
+                    self.profile = profile
+                }
+            case .failure(let error):
+                print("Fetch Profile Error \(error)")
+            }
+        }
+    }
     
     public func getLatestEmotion() {
         storyService.getLatestTodayStory { story, error in

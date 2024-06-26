@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-import FirebaseCore
 import Speech
+import FirebaseCore
 
 class AppDelegate: NSObject, UIApplicationDelegate {
   func application(_ application: UIApplication,
@@ -20,8 +20,6 @@ class AppDelegate: NSObject, UIApplicationDelegate {
 @main
 struct PawseApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    @StateObject private var authViewModel = AuthenticationViewModel()
-    @StateObject private var route = Route()
     
     init() {
         requestSpeechAuthorization()
@@ -30,8 +28,6 @@ struct PawseApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environmentObject(authViewModel)
-                .environmentObject(route)
         }
     }
     

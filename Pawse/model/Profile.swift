@@ -11,21 +11,19 @@ import FirebaseFirestoreSwift
 
 struct Profile: Codable, Identifiable {
     @DocumentID var id: String?
-    var userId: String
-    var username: String
+    var name: String
     var coin: Int
     
     enum CodingKeys: String, CodingKey
     {
         case id
-        case userId = "user_id"
-        case username
+        case name
         case coin
     }
 }
 
 extension Profile {
   static var empty: Profile {
-      Profile(userId: "", username: "", coin: 0)
+      Profile(name: "", coin: 0)
   }
 }

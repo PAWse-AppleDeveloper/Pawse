@@ -8,13 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
-//    @EnvironmentObject var authViewModel: AuthenticationViewModel
+    @ObservedObject var authViewModel: AuthenticationViewModel = AuthenticationViewModel()
     
     var body: some View {
         Group {
             NavigationStack {
-                MoodView()
+                if authViewModel.isLoggedIn {
+                    MoodView()
+                } else {
+                    LoginView()
+                }
             }
+            .environmentObject(authViewModel)
         }
     }
 }

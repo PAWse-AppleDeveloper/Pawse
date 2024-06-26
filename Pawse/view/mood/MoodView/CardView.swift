@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct CardView: View {
+    let quest: Quest
     var body: some View {
         HStack(alignment: .center, spacing: 24) {
             Image("Rectangle")
@@ -17,10 +18,10 @@ struct CardView: View {
                 HStack(alignment: .center) {
                     // Space Between
                     VStack(alignment: .leading, spacing: 0) {
-                        Text("Share")
+                        Text(quest.name)
                             .fontWeight(.bold)
                             .foregroundColor(Color(red: 0.24, green: 0.26, blue: 0.31))
-                        Text("tell your story")
+                        Text(quest.description)
                             .font(.subheadline)
                           .foregroundColor(Color(red: 0.5, green: 0.5, blue: 0.5))
                     }
@@ -39,7 +40,7 @@ struct CardView: View {
                 .padding(0)
                 .frame(maxWidth: .infinity, alignment: .center)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text("Completed")
+                    Text(quest.isCompleted ? "Completed" : "Uncompleted")
                       .font(Font.custom("SF Pro", size: 12))
                       .foregroundColor(Color(red: 0.68, green: 0.39, blue: 0))
                 }
@@ -77,5 +78,5 @@ struct DisabledCardView: View {
 
 
 #Preview {
-    CardView()
+    CardView(quest: Quest.empty)
 }

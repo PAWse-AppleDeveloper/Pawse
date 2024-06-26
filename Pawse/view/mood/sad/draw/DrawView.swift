@@ -25,88 +25,87 @@ struct DrawView: View {
     @ObservedObject private var drawViewModel = DrawViewModel()
     
     var body: some View {
-        NavigationStack {
-            VStack {
-                Canvas { context, size in
-                    for line in lines {
-                        var path = Path()
-                        path.addLines(line.points)
-                        context.stroke(path, with: .color(line.color), lineWidth: line.lineWidth)
+        VStack {
+            Canvas { context, size in
+                for line in lines {
+                    var path = Path()
+                    path.addLines(line.points)
+                    context.stroke(path, with: .color(line.color), lineWidth: line.lineWidth)
+                }
+            }
+            .border(Color.black)
+            .colorEffect(ShaderLibrary.recolor(.color(replacement)))
+            .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
+                .onChanged({ value in
+                    let newPoint = value.location
+                    if var currentLine = lines.last {
+                        currentLine.points.append(newPoint)
+                        lines[lines.count - 1] = currentLine
+                    } else {
+                        lines.append(Line(points: [newPoint], color: replacement))
                     }
-                }
-                .border(Color.black)
-                .colorEffect(ShaderLibrary.recolor(.color(replacement)))
-                .gesture(DragGesture(minimumDistance: 0, coordinateSpace: .local)
-                    .onChanged({ value in
-                        let newPoint = value.location
-                        if var currentLine = lines.last {
-                            currentLine.points.append(newPoint)
-                            lines[lines.count - 1] = currentLine
-                        } else {
-                            lines.append(Line(points: [newPoint], color: replacement))
-                        }
-                        
+                    
+                })
+                    .onEnded({ value in
+                        lines.append(Line(points: [], color: replacement))
                     })
-                        .onEnded({ value in
-                            lines.append(Line(points: [], color: replacement))
-                        })
-                )
-                ColorPicker(selection: $replacement) {
-                    Text("Change Color")
-                }
-                .padding()
-                Button{
-                    lines = []
+            )
+            ColorPicker(selection: $replacement) {
+                Text("Change Color")
+            }
+            .padding()
+            Button{
+                lines = []
+            } label: {
+                Text("Clear")
+                    .foregroundStyle(.white)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(.blue)
+                    .cornerRadius(16)
+            }
+            .padding()
+            
+            if timeRemaining > 0 {
+                ProgressView(value: Double(timeRemaining), total: 600)
+                    .progressViewStyle(LinearProgressViewStyle(tint: .blue))
+                    .padding()
+            } else {
+                Button {
+                    saveQuestAndNavigate()
                 } label: {
-                    Text("Clear")
+                    Text("Done")
                         .foregroundStyle(.white)
                         .padding()
                         .frame(maxWidth: .infinity)
-                        .background(.blue)
+                        .background(.green)
                         .cornerRadius(16)
                 }
-                .padding()
-                
-                if timeRemaining > 0 {
-                    ProgressView(value: Double(timeRemaining), total: 600)
-                        .progressViewStyle(LinearProgressViewStyle(tint: .blue))
-                        .padding()
-                } else {
-                    Button {
-                        saveQuestAndNavigate()
-                    } label: {
-                        Text("Done")
-                            .foregroundStyle(.white)
-                            .padding()
-                            .frame(maxWidth: .infinity)
-                            .background(.green)
-                            .cornerRadius(16)
-                    }
 //                    NavigationLink(destination: MoodView()) {
 //
 //                    }
 //                    .padding()
-                }
             }
-            .navigationDestination(isPresented: $drawViewModel.navigateToMoodView) {
-                MoodView()
-            }
-            .onAppear(perform: startTimer)
-            .toolbar(content: {
-                ToolbarItem(placement: .topBarTrailing) {
-                    HStack {
-                        Button {
-                            if lines.count != 0 {
-                                lines.removeLast()
-                            }
-                        } label: {
-                            Image(systemName: "arrow.uturn.backward.circle.fill")
-                                .foregroundStyle(.blue)
+        }
+        .navigationBarBackButtonHidden()
+        .navigationDestination(isPresented: $drawViewModel.navigateToMoodView) {
+            MoodView()
+        }
+        .onAppear(perform: startTimer)
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarTrailing) {
+                HStack {
+                    Button {
+                        if lines.count != 0 {
+                            lines.removeLast()
                         }
+                    } label: {
+                        Image(systemName: "arrow.uturn.backward.circle.fill")
+                            .foregroundStyle(.blue)
                     }
                 }
-            })
-        }
+            }
+        })
     }
     
     private func startTimer() {

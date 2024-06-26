@@ -40,6 +40,7 @@ struct DrawLottieView: View {
             
         }
         .padding()
+        .navigationBarBackButtonHidden()
     }
 }
 

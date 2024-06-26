@@ -1,5 +1,5 @@
 //
-//  DrawViewModel.swift
+//  ShoutViewModel.swift
 //  Pawse
 //
 //  Created by hendra on 25/06/24.
@@ -7,11 +7,11 @@
 
 import Foundation
 
-class DrawViewModel: ObservableObject {
-    @Published public var navigateToMoodView = false
+class ShoutViewModel: ObservableObject {
     var profile: Profile?
-    private var questService = QuestService()
+    @Published public var navigateToMoodView = false
     private var profileService = ProfileService()
+    private var questService = QuestService()
     
     init() {
         self.fetchProfile()

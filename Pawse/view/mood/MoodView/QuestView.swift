@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct QuestView: View {
+    let quests: [Quest]
     var body: some View {
         VStack(alignment: .leading, spacing: 24) {
             Text("Today’s Quest")
@@ -17,10 +18,11 @@ struct QuestView: View {
                 .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.11))
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                    CardView()
-                    CardView()
-                    CardView()
-                    CardView()
+                    ForEach(quests) { quest in
+                        NavigationLink(destination: destinationView(for: quest)) {
+                            CardView(quest: quest)
+                        }
+                    }
                 }
                 .padding(0)
                 .frame(maxWidth: .infinity, alignment: .topLeading)
@@ -30,8 +32,22 @@ struct QuestView: View {
         .padding(0)
         .frame(maxWidth: .infinity, alignment: .topLeading)
     }
+    
+    @ViewBuilder
+    private func destinationView(for quest: Quest) -> some View {
+        switch quest.navigation {
+        case "Draw":
+            DrawLottieView(quest: quest)
+        case "Shout":
+            ShoutView(quest: quest)
+        case "Punch":
+            PunchView()
+        default:
+            Text("Unknown destination")
+        }
+    }
 }
 
 #Preview {
-    QuestView()
+    QuestView(quests: [Quest.empty])
 }
