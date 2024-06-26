@@ -13,37 +13,48 @@ struct LoadingView: View {
     ]
     
     var body: some View {
-        VStack(alignment: .center, spacing: 10) {
-            Spacer()
-            LottieView(name: "loading screen").frame(width: 400, height: 400)
-            VStack{
-            Text("Loading...")
-                .font(.callout)
-                .fontWeight(.light)
-              }.padding()
-            
-            Divider()
-            
-            VStack() {
-                Text("")
-                    .font(.title2)
-                    .italic()
-                    .padding()
+        ZStack{
+            Color(.systemBackground)
+                .ignoresSafeArea()
+                .frame(height: .infinity)
+            VStack(alignment: .center, spacing: 10) {
                 
-                    .typingText(percentage: typingAnimationProgress, text: motivationalQuotes[currentQuoteIndex])            }
-            
-            Spacer()
-        }.padding(.horizontal,50)
-            .onAppear {
-                startLoading()
-                startTypingAnimation()
-            }
-            .onDisappear {
-                stopLoading()
-                stopTypingAnimation()
-            }
+                Spacer()
+                LottieView(name: "loading screen").frame(width: 400, height: 400)
+                VStack{
+                    Text("Loading...")
+                        .font(.callout)
+                        .fontWeight(.light)
+                }.padding()
+                    
+                
+                Divider()
+                
+                VStack() {
+                    Text("")
+                        .font(
+                            Font.custom("SF Pro", size: 16)
+                                .weight(.medium)
+                        )
+                        .padding(.horizontal)
+                    
+                        .typingText(percentage: typingAnimationProgress, text: motivationalQuotes[currentQuoteIndex])
+                }.padding(25)
+                
+                Spacer()
+            }.padding()
+                .onAppear {
+                    startLoading()
+                    startTypingAnimation()
+                }
+                .onDisappear {
+                    stopLoading()
+                    stopTypingAnimation()
+                }
+        }
+        .padding(.horizontal, 20)
+        
     }
-     
     func startLoading() {
         timer = Timer.scheduledTimer(withTimeInterval: 0.3, repeats: true) { _ in
             if progress < 1.0 {
@@ -90,4 +101,9 @@ func stopTypingAnimation() {
             LoadingView()
         }
     }
+}
+
+
+#Preview {
+    LoadingView()
 }

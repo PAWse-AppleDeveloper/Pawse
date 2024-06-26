@@ -30,6 +30,10 @@
 		466499782C294FEA00D68857 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 466499772C294FEA00D68857 /* FirebaseFirestoreSwift */; };
 		46CF26FA2C29861D00AE59A0 /* TypingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF26F92C29861D00AE59A0 /* TypingModifier.swift */; };
 		46CF26FB2C29861D00AE59A0 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46CF26F82C29861D00AE59A0 /* LoadingView.swift */; };
+		46D795172C2C1AD4006E3AE9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D795152C2C1AD4006E3AE9 /* User.swift */; };
+		46D795182C2C1AD4006E3AE9 /* TodayTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D795162C2C1AD4006E3AE9 /* TodayTaskView.swift */; };
+		46D795192C2C1AD4006E3AE9 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D795132C2C1AD4006E3AE9 /* ProfileView.swift */; };
+		46D7951A2C2C1AD4006E3AE9 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46D795142C2C1AD4006E3AE9 /* Profile.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		23ECD6542C26F78300DD013F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		46CF26F82C29861D00AE59A0 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		46CF26F92C29861D00AE59A0 /* TypingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingModifier.swift; sourceTree = "<group>"; };
+		46D795132C2C1AD4006E3AE9 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		46D795142C2C1AD4006E3AE9 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		46D795152C2C1AD4006E3AE9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		46D795162C2C1AD4006E3AE9 /* TodayTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTaskView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,7 @@
 		237BC7A22C268EE70065225C /* view */ = {
 			isa = PBXGroup;
 			children = (
+				46D7951B2C2C1ADB006E3AE9 /* Profile */,
 				4664997C2C29768C00D68857 /* LoadingScreen */,
 				23ECD6482C26EB8100DD013F /* auth */,
 				237BC7A72C269C130065225C /* home */,
@@ -172,6 +181,17 @@
 				46CF26F92C29861D00AE59A0 /* TypingModifier.swift */,
 			);
 			path = LoadingScreen;
+			sourceTree = "<group>";
+		};
+		46D7951B2C2C1ADB006E3AE9 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				46D795162C2C1AD4006E3AE9 /* TodayTaskView.swift */,
+				46D795152C2C1AD4006E3AE9 /* User.swift */,
+				46D795132C2C1AD4006E3AE9 /* ProfileView.swift */,
+				46D795142C2C1AD4006E3AE9 /* Profile.swift */,
+			);
+			path = Profile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -260,6 +280,10 @@
 			files = (
 				237BC7832C25BD710065225C /* ContentView.swift in Sources */,
 				23ECD6552C26F78300DD013F /* Profile.swift in Sources */,
+				46D795172C2C1AD4006E3AE9 /* User.swift in Sources */,
+				46D795182C2C1AD4006E3AE9 /* TodayTaskView.swift in Sources */,
+				46D795192C2C1AD4006E3AE9 /* ProfileView.swift in Sources */,
+				46D7951A2C2C1AD4006E3AE9 /* Profile.swift in Sources */,
 				237BC7812C25BD710065225C /* PawseApp.swift in Sources */,
 				23ECD6532C26F74D00DD013F /* ProfileService.swift in Sources */,
 				237BC7A62C2695580065225C /* SignInView.swift in Sources */,
