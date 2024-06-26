@@ -64,20 +64,29 @@ struct ShoutView: View {
                         .foregroundStyle(.gray)
                 }
             }
-
-            if audioDetector.isLoud {
-                Text("Success")
-                    .font(.largeTitle)
-                    .foregroundColor(.red)
+            if audioDetector.isSuccess {
+                Button {
+                    saveQuestAndNavigate()
+                } label: {
+                    Text("Done")
+                        .foregroundStyle(.white)
+                        .padding()
+                        .frame(maxWidth: .infinity)
+                        .background(Color.biruTuaSlider)
+                        .cornerRadius(16)
+                }
             }
         }
         .padding()
         .navigationBarBackButtonHidden()
+        .navigationDestination(isPresented: $shoutViewModel.navigateToMoodView, destination: {
+            MoodView()
+        })
     }
     
-//    private func saveQuestAndNavigate() {
-//        moodViewModel.completeQuest(quest: quest)
-//    }
+    private func saveQuestAndNavigate() {
+        shoutViewModel.completeQuest(quest: quest)
+    }
 }
 
 struct CapsuleView: View {
@@ -89,7 +98,7 @@ struct CapsuleView: View {
     var body: some View {
         GeometryReader { geometry in
             Capsule()
-                .fill(.green)
+                .fill(.biruBTN)
                 .frame(height: height(for: geometry.size.height))
         }
     }

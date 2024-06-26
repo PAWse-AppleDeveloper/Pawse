@@ -9,7 +9,7 @@ import Foundation
 
 class DrawViewModel: ObservableObject {
     @Published public var navigateToMoodView = false
-    var profile: Profile?
+    var user: User?
     private var questService = QuestService()
     private var profileService = ProfileService()
     
@@ -20,9 +20,9 @@ class DrawViewModel: ObservableObject {
     private func fetchProfile() {
         profileService.getProfile { result in
             switch result {
-            case .success(let profile):
+            case .success(let user):
                 DispatchQueue.main.async {
-                    self.profile = profile
+                    self.user = user
                 }
             case .failure(let error):
                 print("Fetch Profile Error \(error)")
@@ -36,13 +36,13 @@ class DrawViewModel: ObservableObject {
         questService.updateQuest(quest: updatedQuest) { result in
             switch result {
             case .success:
-                if var profile = self.profile {
-                    profile.coin += quest.coin
-                    self.profileService.updateProfile(profile: profile) { profileResult in
+                if var user = self.user {
+                    user.coin += quest.coin
+                    self.profileService.updateProfile(user: user) { profileResult in
                         switch profileResult {
                         case .success:
                             DispatchQueue.main.async {
-                                self.profile = profile
+                                self.user = user
                                 self.navigateToMoodView = true
                             }
                             print("Profile successfully updated!")

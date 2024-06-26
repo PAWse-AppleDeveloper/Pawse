@@ -9,11 +9,12 @@ import SwiftUI
 
 struct CardView: View {
     let quest: Quest
+    
     var body: some View {
+        var progress: Float = Float(quest.duration / quest.progress)
         HStack(alignment: .center, spacing: 24) {
-            Image("Rectangle")
+            Image(systemName: quest.icon)
                 .frame(width: 48, height: 48)
-                .background(Color(red: 0.22, green: 0.22, blue: 0.22))
             VStack(alignment: .leading, spacing: 6) {
                 HStack(alignment: .center) {
                     // Space Between
@@ -31,7 +32,7 @@ struct CardView: View {
                     VStack(alignment: .center, spacing: 0) {
                         Image(systemName: "dollarsign.circle.fill")
                             .foregroundColor(Color(red: 0.92, green: 0.76, blue: 0.32))
-                        Text("3 Coin")
+                        Text(quest.coin.description)
                             .font(.footnote)
                             .foregroundColor(Color(red: 0.79, green: 0.51, blue: 0))
                     }
@@ -40,9 +41,14 @@ struct CardView: View {
                 .padding(0)
                 .frame(maxWidth: .infinity, alignment: .center)
                 VStack(alignment: .leading, spacing: 2) {
-                    Text(quest.isCompleted ? "Completed" : "Uncompleted")
+                    Text(quest.isCompleted ? "Progress: completed" : "Progress: uncompleted")
                       .font(Font.custom("SF Pro", size: 12))
                       .foregroundColor(Color(red: 0.68, green: 0.39, blue: 0))
+                    ProgressView(value: progress)
+                        .progressViewStyle(LinearProgressViewStyle(tint: .orange))
+                        .frame(height: 4)
+                        .cornerRadius(2)
+                        .padding(.top, 4)
                 }
                 .padding(0)
             }
@@ -61,7 +67,12 @@ struct DisabledCardView: View {
         HStack(alignment: .center, spacing: 24) {
             Image(systemName: "lock.fill")
                 .font(.system(size: 36))
-            Text("Please start journaling to unlock your quest!")
+                .overlay {
+                    Rectangle()
+                        .fill(.black)
+                        .opacity(0.3)
+                }
+            Text("Please start journaling first!")
                 .font(.system(size: 17))
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
               .foregroundColor(Color(red: 0.24, green: 0.26, blue: 0.31))

@@ -8,7 +8,23 @@
 import SwiftUI
 
 struct CatView: View {
-    let profile: Profile
+    let user: User
+    let story: Story
+    
+    private func getLottieAnimationName(for emotion: String) -> String {
+        print("Emosi\(emotion)")
+        switch emotion {
+        case "Sad":
+            return "sedih homepage"
+        case "Angry":
+            return "marah homepage"
+        case "Anxiety":
+            return "cemas homepage"
+        default:
+            return "null"
+        }
+    }
+    
     var body: some View {
         HStack {
             VStack(alignment: .center, spacing: 36) {
@@ -18,7 +34,7 @@ struct CatView: View {
                         .foregroundColor(Color(red: 0.92, green: 0.76, blue: 0.32))
                     // Space Between
                     HStack(alignment: .center, spacing: 0) {
-                        Text(profile.coin.description)
+                        Text(user.coin.description)
                             .multilineTextAlignment(.center)
                             .foregroundColor(Color(red: 0.92, green: 0.76, blue: 0.32))
                     }
@@ -38,7 +54,7 @@ struct CatView: View {
                 .padding(.vertical, 16)
                 .frame(width: 396, alignment: .center)
                 .background(Color(red: 0.64, green: 0.52, blue: 0.37))
-                LottieView(name: "hello_2", loopMode: .loop)
+                LottieView(name: getLottieAnimationName(for: story.emotion), loopMode: .loop)
                 NavigationLink(destination: JournalView()) {
                     Label("Start Journaling", systemImage: "book.closed.fill")
                           .padding(.horizontal, 0)
@@ -53,6 +69,6 @@ struct CatView: View {
     }
 }
 
-//#Preview {
-//    CatView()
-//}
+#Preview {
+    CatView(user: User.empty, story: Story.empty)
+}

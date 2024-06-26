@@ -12,7 +12,7 @@ class AudioDetector: ObservableObject {
     private var audioRecorder: AVAudioRecorder!
     private var timer: Timer?
 
-    @Published var isLoud = false
+    @Published var isSuccess = false
     @Published var currentLevel: Float = -160.0
 
     private let loudnessThreshold: Float = -5
@@ -80,8 +80,17 @@ class AudioDetector: ObservableObject {
         let averagePower = audioRecorder.averagePower(forChannel: 0)
         DispatchQueue.main.async {
             self.currentLevel = averagePower
-            self.isLoud = averagePower > self.loudnessThreshold
+            if averagePower > self.loudnessThreshold {
+                self.isSuccess = true
+                self.stopMonitoring()
+            }
         }
+    }
+    
+    private func stopMonitoring() {
+        audioRecorder.stop()
+        timer?.invalidate()
+        timer = nil
     }
 
     deinit {

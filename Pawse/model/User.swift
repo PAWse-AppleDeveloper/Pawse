@@ -9,21 +9,25 @@ import Foundation
 import FirebaseFirestore
 import FirebaseFirestoreSwift
 
-struct Profile: Codable, Identifiable {
+struct User: Codable, Identifiable {
     @DocumentID var id: String?
     var name: String
     var coin: Int
+    var uid: String
+    var email: String
     
     enum CodingKeys: String, CodingKey
     {
         case id
         case name
         case coin
+        case uid
+        case email
     }
 }
 
-extension Profile {
-  static var empty: Profile {
-      Profile(name: "", coin: 0)
+extension User {
+  static var empty: User {
+      User(name: "", coin: 0, uid: "", email: "")
   }
 }

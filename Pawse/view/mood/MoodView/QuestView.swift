@@ -18,9 +18,14 @@ struct QuestView: View {
                 .foregroundColor(Color(red: 0.09, green: 0.09, blue: 0.11))
             ScrollView {
                 VStack(alignment: .leading, spacing: 16) {
-                    ForEach(quests) { quest in
-                        NavigationLink(destination: destinationView(for: quest)) {
-                            CardView(quest: quest)
+                    if quests.isEmpty {
+                        DisabledCardView()
+                    }
+                    else {
+                        ForEach(quests) { quest in
+                            NavigationLink(destination: destinationView(for: quest)) {
+                                CardView(quest: quest)
+                            }
                         }
                     }
                 }

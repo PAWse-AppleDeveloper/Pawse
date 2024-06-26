@@ -52,12 +52,16 @@
 		237BC7A42C268EFB0065225C /* AuthenticationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237BC7A32C268EFB0065225C /* AuthenticationViewModel.swift */; };
 		237BC7A62C2695580065225C /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237BC7A52C2695580065225C /* SignInView.swift */; };
 		237BC7AC2C269C7B0065225C /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 237BC7AB2C269C7B0065225C /* Route.swift */; };
+		23913E9F2C2C3A24008A576F /* marah homepage.json in Resources */ = {isa = PBXBuildFile; fileRef = 23913E9E2C2C3A24008A576F /* marah homepage.json */; };
+		23913EA12C2C3A32008A576F /* cemas homepage.json in Resources */ = {isa = PBXBuildFile; fileRef = 23913EA02C2C3A32008A576F /* cemas homepage.json */; };
+		23913EA32C2C3A38008A576F /* sedih homepage.json in Resources */ = {isa = PBXBuildFile; fileRef = 23913EA22C2C3A38008A576F /* sedih homepage.json */; };
+		23913EA52C2C3A42008A576F /* congratulations.json in Resources */ = {isa = PBXBuildFile; fileRef = 23913EA42C2C3A42008A576F /* congratulations.json */; };
 		23AA9E2D2C294D5400F18AF8 /* UserQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA9E2C2C294D5400F18AF8 /* UserQuest.swift */; };
 		23CB32B22C2951B7003C20E8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CB32B12C2951B7003C20E8 /* ProfileView.swift */; };
 		23ECD64B2C26ED2100DD013F /* StoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECD64A2C26ED2100DD013F /* StoryService.swift */; };
 		23ECD64E2C26EF3000DD013F /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECD64D2C26EF3000DD013F /* Story.swift */; };
 		23ECD6532C26F74D00DD013F /* ProfileService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECD6522C26F74D00DD013F /* ProfileService.swift */; };
-		23ECD6552C26F78300DD013F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECD6542C26F78300DD013F /* Profile.swift */; };
+		23ECD6552C26F78300DD013F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECD6542C26F78300DD013F /* User.swift */; };
 		23ECD6582C26FA0E00DD013F /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECD6572C26FA0E00DD013F /* Quest.swift */; };
 		23ECD65C2C291C9A00DD013F /* QuestService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECD65B2C291C9A00DD013F /* QuestService.swift */; };
 		23ECD65F2C291DAF00DD013F /* JournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECD65E2C291DAF00DD013F /* JournalView.swift */; };
@@ -101,12 +105,17 @@
 		237BC7A32C268EFB0065225C /* AuthenticationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationViewModel.swift; sourceTree = "<group>"; };
 		237BC7A52C2695580065225C /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		237BC7AB2C269C7B0065225C /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
+		23913E9E2C2C3A24008A576F /* marah homepage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "marah homepage.json"; sourceTree = "<group>"; };
+		23913EA02C2C3A32008A576F /* cemas homepage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cemas homepage.json"; sourceTree = "<group>"; };
+		23913EA22C2C3A38008A576F /* sedih homepage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "sedih homepage.json"; sourceTree = "<group>"; };
+		23913EA42C2C3A42008A576F /* congratulations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = congratulations.json; sourceTree = "<group>"; };
+		23913EA92C2C4844008A576F /* congratulations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = congratulations.json; sourceTree = "<group>"; };
 		23AA9E2C2C294D5400F18AF8 /* UserQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQuest.swift; sourceTree = "<group>"; };
 		23CB32B12C2951B7003C20E8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		23ECD64A2C26ED2100DD013F /* StoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryService.swift; sourceTree = "<group>"; };
 		23ECD64D2C26EF3000DD013F /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
 		23ECD6522C26F74D00DD013F /* ProfileService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileService.swift; sourceTree = "<group>"; };
-		23ECD6542C26F78300DD013F /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		23ECD6542C26F78300DD013F /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		23ECD6572C26FA0E00DD013F /* Quest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
 		23ECD65B2C291C9A00DD013F /* QuestService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestService.swift; sourceTree = "<group>"; };
 		23ECD65E2C291DAF00DD013F /* JournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalView.swift; sourceTree = "<group>"; };
@@ -228,11 +237,9 @@
 				235DC4382C2B2753004F5F64 /* GoogleService-Info.plist */,
 				237BC7802C25BD710065225C /* PawseApp.swift */,
 				237BC7822C25BD710065225C /* ContentView.swift */,
+				23913EA42C2C3A42008A576F /* congratulations.json */,
+				23913EA82C2C4826008A576F /* assets */,
 				23502DA22C295F9F00D7F42A /* Assets.xcassets */,
-				235DC4212C2A85B1004F5F64 /* lukis.json */,
-				235DC41F2C2A82EA004F5F64 /* cemas-2.json */,
-				235DC41D2C2A82A3004F5F64 /* Marah-2.json */,
-				235DC41B2C2A8299004F5F64 /* nangis-2.json */,
 				237BC7862C25BD730065225C /* Preview Content */,
 				235DC4172C2A6EC7004F5F64 /* Shader.metal */,
 			);
@@ -277,6 +284,21 @@
 			path = utils;
 			sourceTree = "<group>";
 		};
+		23913EA82C2C4826008A576F /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				23913EA02C2C3A32008A576F /* cemas homepage.json */,
+				23913EA22C2C3A38008A576F /* sedih homepage.json */,
+				235DC41D2C2A82A3004F5F64 /* Marah-2.json */,
+				235DC41B2C2A8299004F5F64 /* nangis-2.json */,
+				235DC41F2C2A82EA004F5F64 /* cemas-2.json */,
+				235DC4212C2A85B1004F5F64 /* lukis.json */,
+				23913E9E2C2C3A24008A576F /* marah homepage.json */,
+				23913EA92C2C4844008A576F /* congratulations.json */,
+			);
+			path = assets;
+			sourceTree = "<group>";
+		};
 		23ECD6482C26EB8100DD013F /* auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -304,7 +326,7 @@
 			isa = PBXGroup;
 			children = (
 				23ECD64D2C26EF3000DD013F /* Story.swift */,
-				23ECD6542C26F78300DD013F /* Profile.swift */,
+				23ECD6542C26F78300DD013F /* User.swift */,
 				23ECD6572C26FA0E00DD013F /* Quest.swift */,
 				23AA9E2C2C294D5400F18AF8 /* UserQuest.swift */,
 			);
@@ -410,8 +432,12 @@
 				235DC4222C2A85B1004F5F64 /* lukis.json in Resources */,
 				23502DA32C295F9F00D7F42A /* Assets.xcassets in Resources */,
 				23502DA52C2968CB00D7F42A /* GenerativeAI-Info.plist in Resources */,
+				23913EA52C2C3A42008A576F /* congratulations.json in Resources */,
 				235DC41E2C2A82A3004F5F64 /* Marah-2.json in Resources */,
+				23913EA12C2C3A32008A576F /* cemas homepage.json in Resources */,
+				23913E9F2C2C3A24008A576F /* marah homepage.json in Resources */,
 				235DC4202C2A82EA004F5F64 /* cemas-2.json in Resources */,
+				23913EA32C2C3A38008A576F /* sedih homepage.json in Resources */,
 				235DC4392C2B2753004F5F64 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,7 +459,7 @@
 				237BC7832C25BD710065225C /* ContentView.swift in Sources */,
 				235DC4352C2B0DB9004F5F64 /* LoginView.swift in Sources */,
 				235DC4182C2A6EC7004F5F64 /* Shader.metal in Sources */,
-				23ECD6552C26F78300DD013F /* Profile.swift in Sources */,
+				23ECD6552C26F78300DD013F /* User.swift in Sources */,
 				23502D9E2C295E0B00D7F42A /* JournalResultView.swift in Sources */,
 				23502D9C2C295D4700D7F42A /* SpeechRecognizer.swift in Sources */,
 				235DC4272C2AA15A004F5F64 /* ShoutView.swift in Sources */,

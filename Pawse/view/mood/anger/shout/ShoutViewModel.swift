@@ -8,7 +8,7 @@
 import Foundation
 
 class ShoutViewModel: ObservableObject {
-    var profile: Profile?
+    var user: User?
     @Published public var navigateToMoodView = false
     private var profileService = ProfileService()
     private var questService = QuestService()
@@ -20,9 +20,9 @@ class ShoutViewModel: ObservableObject {
     private func fetchProfile() {
         profileService.getProfile { result in
             switch result {
-            case .success(let profile):
+            case .success(let user):
                 DispatchQueue.main.async {
-                    self.profile = profile
+                    self.user = user
                 }
             case .failure(let error):
                 print("Fetch Profile Error \(error)")
@@ -33,16 +33,17 @@ class ShoutViewModel: ObservableObject {
     public func completeQuest(quest: Quest) {
         var updatedQuest = quest
         updatedQuest.isCompleted = true
+        updatedQuest.progress = 100
         questService.updateQuest(quest: updatedQuest) { result in
             switch result {
             case .success:
-                if var profile = self.profile {
-                    profile.coin += quest.coin
-                    self.profileService.updateProfile(profile: profile) { profileResult in
+                if var user = self.user {
+                    user.coin += quest.coin
+                    self.profileService.updateProfile(user: user) { profileResult in
                         switch profileResult {
                         case .success:
                             DispatchQueue.main.async {
-                                self.profile = profile
+                                self.user = user
                                 self.navigateToMoodView = true
                             }
                             print("Profile successfully updated!")

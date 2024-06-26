@@ -11,13 +11,13 @@ import FirebaseFirestore
 
 class ProfileService {
     private var db = Firestore.firestore()
-    private var tableName = "profile"
+    private var tableName = "users"
     
-    func saveProfile(profile: Profile, userId: String) throws {
+    func saveProfile(profile: User, userId: String) throws {
         try db.collection(tableName).document(userId).setData(from: profile)
     }
     
-    func getProfile(completion: @escaping (Result<Profile, Error>) -> Void) {
+    func getProfile(completion: @escaping (Result<User, Error>) -> Void) {
         db.collection(tableName).limit(to: 1).getDocuments { snapshot, error in
             if let error = error {
                 print("Error fetching profile: \(error.localizedDescription)")
@@ -32,8 +32,8 @@ class ProfileService {
             }
 
             do {
-                let profile = try document.data(as: Profile.self)
-                completion(.success(profile))
+                let user = try document.data(as: User.self)
+                completion(.success(user))
             } catch {
                 print("Error decoding profile: \(error.localizedDescription)")
                 completion(.failure(error))
@@ -41,9 +41,9 @@ class ProfileService {
         }
     }
     
-    func updateProfile(profile: Profile, completion: @escaping (Result<Void, Error>) -> Void) {
+    func updateProfile(user: User, completion: @escaping (Result<Void, Error>) -> Void) {
         do {
-            try db.collection(tableName).document(profile.id!).setData(from: profile, merge: true) { error in
+            try db.collection(tableName).document(user.uid).setData(from: user, merge: true) { error in
                 if let error = error {
                     print("Error updating profile: \(error.localizedDescription)")
                     completion(.failure(error))

@@ -11,7 +11,7 @@ struct MoodView: View {
     @ObservedObject private var moodViewModel = MoodViewModel()
     var body: some View {
         VStack {
-            CatView(profile: moodViewModel.profile ?? Profile.empty)
+            CatView(user: moodViewModel.user ?? User.empty, story: moodViewModel.currentStory ?? Story.empty)
             QuestView(quests: moodViewModel.quests ?? [])
         }
         .onAppear {

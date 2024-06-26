@@ -62,7 +62,8 @@ struct RegisterView: View {
                             db.collection("users").document(userID).setData([
                                 "name": name,
                                 "email": email,
-                                "uid": userID
+                                "uid": userID,
+                                "coin": 0
                             ]) { error in
                                 if let error = error {
                                     print(error.localizedDescription)
