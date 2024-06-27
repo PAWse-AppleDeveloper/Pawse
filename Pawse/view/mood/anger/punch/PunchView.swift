@@ -9,6 +9,8 @@ import SwiftUI
 import CoreHaptics
 
 struct PunchView: View {
+    @State private var navigateToCongratsView = false
+    var quest: Quest
     @State private var punches = 0
     @State private var timeRemaining = 30
     @State private var targetPosition = CGPoint(x: 100, y: 100)
@@ -33,7 +35,9 @@ struct PunchView: View {
                 Spacer()
                 
                 if gameCompleted {
-                    Button(action: startGame) {
+                    Button{
+                        navigateToCongratsView = true
+                    }  label: {
                         Text("Complete")
                             .font(.title)
                             .padding()
@@ -55,6 +59,10 @@ struct PunchView: View {
                 Spacer()
             }
         }
+        .navigationBarBackButtonHidden()
+        .navigationDestination(isPresented: $navigateToCongratsView, destination: {
+            CongratsView(quest: quest)
+        })
         .onAppear(perform: startGame)
     }
 
@@ -129,6 +137,6 @@ struct PunchView: View {
 
 struct PunchView_Previews: PreviewProvider {
     static var previews: some View {
-        PunchView()
+        PunchView(quest: Quest.empty)
     }
 }

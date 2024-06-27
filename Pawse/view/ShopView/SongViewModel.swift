@@ -10,22 +10,68 @@ import SwiftUI
 import AVFoundation
 
 class SongViewModel: ObservableObject {
+    @Published var user: User?
     @Published var songs: [Song]
     private var audioPlayer: AVAudioPlayer?
     @Published var currentlyPlayingSong: Song?
     @Published var isPlaying = false
+    private let songStorage = SongStorage()
+    private var profileService = ProfileService()
+    @Published var errorMessage: String? = nil
     
     init() {
-        self.songs = [
-            Song(name: "Weightless", description: "if you need to calm down your anxiety", coin: 5, isBought: false, fileName: "Weightless.mp3"),
-            Song(name: "Serene Solitude", description: "Evoke a sense of tranquility", coin: 3, isBought: true, fileName: "Gymnopede.mp3"),
-            Song(name: "Whispers in the Glass", description: "a sense of dialogue and reflection", coin: 4, isBought: false, fileName: "Spiegel.mp3")
-        ]
+        self.songs = songStorage.loadSongs()
+        if songs.isEmpty {
+            self.songs = [
+                Song(name: "Weightless", description: "if you need to calm down your anxiety", coin: 5, isBought: false, fileName: "Weightless.mp3"),
+                Song(name: "Serene Solitude", description: "Evoke a sense of tranquility", coin: 3, isBought: true, fileName: "Gymnopede.mp3"),
+                Song(name: "Whispers in the Glass", description: "a sense of dialogue and reflection", coin: 4, isBought: false, fileName: "Spiegel.mp3")
+            ]
+            songStorage.saveSongs(songs)
+        }
+        self.fetchProfile()
+    }
+    
+    private func fetchProfile() {
+        profileService.getProfile { result in
+            switch result {
+            case .success(let user):
+                DispatchQueue.main.async {
+                    self.user = user
+                }
+            case .failure(let error):
+                print("Fetch Profile Error \(error)")
+            }
+        }
     }
     
     func buySong(_ song: Song) {
-        if let index = songs.firstIndex(where: { $0.id == song.id }) {
-            songs[index].isBought = true
+        guard let user = user else { return }
+        if user.coin >= song.coin {
+            if let index = songs.firstIndex(where: { $0.id == song.id }) {
+                songs[index].isBought = true
+                songStorage.saveSongs(songs)
+                
+                var updatedUser = user
+                updatedUser.coin -= song.coin
+                profileService.updateProfile(user: updatedUser) { result in
+                    switch result {
+                    case .success:
+                        DispatchQueue.main.async {
+                            self.user = updatedUser
+                        }
+                    case .failure(let error):
+                        print("Error updating user profile: \(error)")
+                    }
+                }
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.errorMessage = "Not enough coins to buy the song."
+                DispatchQueue.main.asyncAfter(deadline: .now() + 3) {
+                    self.errorMessage = nil
+                }
+            }
         }
     }
     

@@ -72,7 +72,7 @@ struct DrawView: View {
                     .padding()
             } else {
                 Button {
-                    saveQuestAndNavigate()
+                    drawViewModel.navigateToCongratsView = true
                 } label: {
                     Text("Done")
                         .foregroundStyle(.white)
@@ -88,8 +88,8 @@ struct DrawView: View {
             }
         }
         .navigationBarBackButtonHidden()
-        .navigationDestination(isPresented: $drawViewModel.navigateToMoodView) {
-            MoodView()
+        .navigationDestination(isPresented: $drawViewModel.navigateToCongratsView) {
+            CongratsView(quest: quest)
         }
         .onAppear(perform: startTimer)
         .toolbar(content: {
@@ -123,10 +123,6 @@ struct DrawView: View {
         let minutes = totalSeconds / 60
         let seconds = totalSeconds % 60
         return String(format: "%02d:%02d", minutes, seconds)
-    }
-    
-    private func saveQuestAndNavigate() {
-        drawViewModel.completeQuest(quest: quest)
     }
 }
     

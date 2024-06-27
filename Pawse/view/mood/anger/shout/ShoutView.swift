@@ -66,7 +66,7 @@ struct ShoutView: View {
             }
             if audioDetector.isSuccess {
                 Button {
-                    saveQuestAndNavigate()
+                    shoutViewModel.navigateToCongratsView = true
                 } label: {
                     Text("Done")
                         .foregroundStyle(.white)
@@ -79,13 +79,9 @@ struct ShoutView: View {
         }
         .padding()
         .navigationBarBackButtonHidden()
-        .navigationDestination(isPresented: $shoutViewModel.navigateToMoodView, destination: {
-            MoodView()
+        .navigationDestination(isPresented: $shoutViewModel.navigateToCongratsView, destination: {
+            CongratsView(quest: quest)
         })
-    }
-    
-    private func saveQuestAndNavigate() {
-        shoutViewModel.completeQuest(quest: quest)
     }
 }
 

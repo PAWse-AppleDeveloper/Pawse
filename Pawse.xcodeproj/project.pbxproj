@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		160B305C2C2AAB620011E6D7 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 160B305B2C2AAB620011E6D7 /* Lottie */; };
 		160B30632C2AAC530011E6D7 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B305D2C2AAC530011E6D7 /* CardView.swift */; };
 		160B30642C2AAC530011E6D7 /* CatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B305E2C2AAC530011E6D7 /* CatView.swift */; };
 		160B30652C2AAC530011E6D7 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 160B305F2C2AAC530011E6D7 /* LottieView.swift */; };
@@ -21,6 +20,11 @@
 		16DD301A2C2C71D6004681A2 /* Gymnopede.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16DD30172C2C71D5004681A2 /* Gymnopede.mp3 */; };
 		16DD301B2C2C71D6004681A2 /* Weightless.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16DD30182C2C71D5004681A2 /* Weightless.mp3 */; };
 		16DD301C2C2C71D6004681A2 /* Spiegel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 16DD30192C2C71D6004681A2 /* Spiegel.mp3 */; };
+		234AA61A2C2D8B3300379E20 /* SongStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6192C2D8B3300379E20 /* SongStorage.swift */; };
+		234AA61D2C2D8CC400379E20 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 234AA61C2C2D8CC400379E20 /* Lottie */; };
+		234AA61F2C2D8E4D00379E20 /* CongratsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA61E2C2D8E4D00379E20 /* CongratsView.swift */; };
+		234AA6212C2D8E9800379E20 /* CongratsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6202C2D8E9800379E20 /* CongratsViewModel.swift */; };
+		234AA6232C2D92D400379E20 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6222C2D92D400379E20 /* ProfileViewModel.swift */; };
 		23502D962C295A1600D7F42A /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D952C295A1600D7F42A /* GoogleGenerativeAI */; };
 		23502D9A2C295C3700D7F42A /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D992C295C3700D7F42A /* DotLottie */; };
 		23502D9C2C295D4700D7F42A /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */; };
@@ -86,6 +90,10 @@
 		16DD30172C2C71D5004681A2 /* Gymnopede.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Gymnopede.mp3; sourceTree = "<group>"; };
 		16DD30182C2C71D5004681A2 /* Weightless.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Weightless.mp3; sourceTree = "<group>"; };
 		16DD30192C2C71D6004681A2 /* Spiegel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Spiegel.mp3; sourceTree = "<group>"; };
+		234AA6192C2D8B3300379E20 /* SongStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SongStorage.swift; sourceTree = "<group>"; };
+		234AA61E2C2D8E4D00379E20 /* CongratsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsView.swift; sourceTree = "<group>"; };
+		234AA6202C2D8E9800379E20 /* CongratsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CongratsViewModel.swift; sourceTree = "<group>"; };
+		234AA6222C2D92D400379E20 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		23502D9D2C295E0B00D7F42A /* JournalResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalResultView.swift; sourceTree = "<group>"; };
 		23502DA02C295F4600D7F42A /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
@@ -136,12 +144,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				160B305C2C2AAB620011E6D7 /* Lottie in Frameworks */,
 				235DC4402C2B2AB2004F5F64 /* FirebaseAnalyticsWithoutAdIdSupport in Frameworks */,
 				23502D962C295A1600D7F42A /* GoogleGenerativeAI in Frameworks */,
 				235DC43E2C2B2AB2004F5F64 /* FirebaseAnalyticsOnDeviceConversion in Frameworks */,
 				235DC43C2C2B2AB2004F5F64 /* FirebaseAnalytics in Frameworks */,
 				235DC4482C2B2AB2004F5F64 /* FirebaseFirestoreSwift in Frameworks */,
+				234AA61D2C2D8CC400379E20 /* Lottie in Frameworks */,
 				235DC4462C2B2AB2004F5F64 /* FirebaseFirestore in Frameworks */,
 				235DC4422C2B2AB2004F5F64 /* FirebaseAuth in Frameworks */,
 				235DC4442C2B2AB2004F5F64 /* FirebaseDatabase in Frameworks */,
@@ -286,6 +294,8 @@
 				160B30622C2AAC530011E6D7 /* MoodView */,
 				235DC4232C2AA11D004F5F64 /* anger */,
 				235DC4132C2A6DC8004F5F64 /* sad */,
+				234AA61E2C2D8E4D00379E20 /* CongratsView.swift */,
+				234AA6202C2D8E9800379E20 /* CongratsViewModel.swift */,
 			);
 			path = mood;
 			sourceTree = "<group>";
@@ -340,6 +350,7 @@
 				23ECD6522C26F74D00DD013F /* ProfileService.swift */,
 				23ECD65B2C291C9A00DD013F /* QuestService.swift */,
 				235DC42C2C2AC411004F5F64 /* AudioDetector.swift */,
+				234AA6192C2D8B3300379E20 /* SongStorage.swift */,
 			);
 			path = service;
 			sourceTree = "<group>";
@@ -360,6 +371,7 @@
 			isa = PBXGroup;
 			children = (
 				23CB32B12C2951B7003C20E8 /* ProfileView.swift */,
+				234AA6222C2D92D400379E20 /* ProfileViewModel.swift */,
 			);
 			path = profile;
 			sourceTree = "<group>";
@@ -393,7 +405,6 @@
 			packageProductDependencies = (
 				23502D952C295A1600D7F42A /* GoogleGenerativeAI */,
 				23502D992C295C3700D7F42A /* DotLottie */,
-				160B305B2C2AAB620011E6D7 /* Lottie */,
 				235DC43B2C2B2AB2004F5F64 /* FirebaseAnalytics */,
 				235DC43D2C2B2AB2004F5F64 /* FirebaseAnalyticsOnDeviceConversion */,
 				235DC43F2C2B2AB2004F5F64 /* FirebaseAnalyticsWithoutAdIdSupport */,
@@ -401,6 +412,7 @@
 				235DC4432C2B2AB2004F5F64 /* FirebaseDatabase */,
 				235DC4452C2B2AB2004F5F64 /* FirebaseFirestore */,
 				235DC4472C2B2AB2004F5F64 /* FirebaseFirestoreSwift */,
+				234AA61C2C2D8CC400379E20 /* Lottie */,
 			);
 			productName = Pawse;
 			productReference = 237BC77D2C25BD710065225C /* Pawse.app */;
@@ -433,8 +445,8 @@
 			packageReferences = (
 				23502D942C295A1600D7F42A /* XCRemoteSwiftPackageReference "generative-ai-swift" */,
 				23502D982C295C3700D7F42A /* XCRemoteSwiftPackageReference "dotlottie-ios" */,
-				160B305A2C2AAB620011E6D7 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 				235DC43A2C2B2AB2004F5F64 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				234AA61B2C2D8CC400379E20 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 237BC77E2C25BD710065225C /* Products */;
 			projectDirPath = "";
@@ -481,6 +493,7 @@
 				160B30632C2AAC530011E6D7 /* CardView.swift in Sources */,
 				23502DA12C295F4600D7F42A /* APIKey.swift in Sources */,
 				235DC4162C2A6E2A004F5F64 /* DrawView.swift in Sources */,
+				234AA6232C2D92D400379E20 /* ProfileViewModel.swift in Sources */,
 				237BC7832C25BD710065225C /* ContentView.swift in Sources */,
 				235DC4352C2B0DB9004F5F64 /* LoginView.swift in Sources */,
 				235DC4182C2A6EC7004F5F64 /* Shader.metal in Sources */,
@@ -492,7 +505,9 @@
 				237BC7812C25BD710065225C /* PawseApp.swift in Sources */,
 				23ECD6532C26F74D00DD013F /* ProfileService.swift in Sources */,
 				235DC42B2C2AA589004F5F64 /* DrawViewModel.swift in Sources */,
+				234AA61F2C2D8E4D00379E20 /* CongratsView.swift in Sources */,
 				235DC41A2C2A81EE004F5F64 /* DrawLottieView.swift in Sources */,
+				234AA6212C2D8E9800379E20 /* CongratsViewModel.swift in Sources */,
 				23AA9E2D2C294D5400F18AF8 /* UserQuest.swift in Sources */,
 				235DC4112C29CE74004F5F64 /* MoodViewModel.swift in Sources */,
 				237BC7A62C2695580065225C /* SignInView.swift in Sources */,
@@ -504,6 +519,7 @@
 				23ECD6582C26FA0E00DD013F /* Quest.swift in Sources */,
 				23ECD64B2C26ED2100DD013F /* StoryService.swift in Sources */,
 				160B306C2C2AAC910011E6D7 /* SongCardView.swift in Sources */,
+				234AA61A2C2D8B3300379E20 /* SongStorage.swift in Sources */,
 				23ECD65F2C291DAF00DD013F /* JournalView.swift in Sources */,
 				235DC4372C2B0DC5004F5F64 /* RegisterView.swift in Sources */,
 				160B30642C2AAC530011E6D7 /* CatView.swift in Sources */,
@@ -730,7 +746,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		160B305A2C2AAB620011E6D7 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+		234AA61B2C2D8CC400379E20 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
 			requirement = {
@@ -765,9 +781,9 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		160B305B2C2AAB620011E6D7 /* Lottie */ = {
+		234AA61C2C2D8CC400379E20 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 160B305A2C2AAB620011E6D7 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			package = 234AA61B2C2D8CC400379E20 /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
 		23502D952C295A1600D7F42A /* GoogleGenerativeAI */ = {

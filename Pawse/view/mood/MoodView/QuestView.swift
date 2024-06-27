@@ -46,7 +46,7 @@ struct QuestView: View {
         case "Shout":
             ShoutView(quest: quest)
         case "Punch":
-            PunchView()
+            PunchView(quest: quest)
         default:
             Text("Unknown destination")
         }

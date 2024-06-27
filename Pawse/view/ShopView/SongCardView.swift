@@ -13,8 +13,6 @@ struct SongCardView: View {
     
     var body: some View {
         ZStack {
-            // Background music notes (unchanged)
-            // Background music notes (unchanged)
             Image(systemName: "music.note")
                 .foregroundColor(Color(red: 0.97, green: 0.92, blue: 0.86))
                 .font(.system(size: 72))
@@ -33,6 +31,13 @@ struct SongCardView: View {
                 .position(x:320.5, y:104.5)
             
             VStack(alignment: .leading, spacing: 24) {
+                if let errorMessage = viewModel.errorMessage {
+                    Text(errorMessage)
+                        .foregroundColor(.red)
+                        .padding()
+                        .transition(.opacity)
+                        .animation(.easeInOut, value: viewModel.errorMessage)
+                }
                 HStack(alignment: .center) {
                     VStack(alignment: .leading, spacing: 2) {
                         Text(song.name)
