@@ -14,10 +14,10 @@ struct ProfileView: View {
         VStack(alignment: .leading) {
             Profile(user: profileViewModel.user ?? User.empty)
                 .padding(.top, 20.0)
-            Divider()
+          
         
             TodayTaskView(completedTasks: profileViewModel.completedQuests, notCompletedTasks: profileViewModel.uncompletedQuests)
-                .padding(.top, 36.0)
+                .padding(.top, 20.0)
             Spacer()
         }
         .padding()

@@ -40,31 +40,24 @@ struct CatView: View {
                     }
                     .padding(0)
                     Spacer()
-                    // Alternative Views and Spacers
-                    NavigationLink(destination: ShopView()) {
-                        Text("Shop")
-                            .padding(.horizontal, 12)
-                            .padding(.vertical, 4)
-                            .background(Color(red: 0.92, green: 0.76, blue: 0.32))
-                            .cornerRadius(24)
-                            .foregroundColor(Color(red: 0.64, green: 0.52, blue: 0.37))
-                    }
                 }
                 .padding(.horizontal, 24)
                 .padding(.vertical, 16)
-                .frame(width: 396, alignment: .center)
+                .frame(width: .infinity, alignment: .center)
                 .background(Color(red: 0.64, green: 0.52, blue: 0.37))
                 LottieView(name: getLottieAnimationName(for: story.emotion), loopMode: .loop)
                 NavigationLink(destination: JournalView()) {
                     Label("Start Journaling", systemImage: "book.closed.fill")
                           .padding(.horizontal, 0)
                           .padding(.vertical, 16)
-                          .frame(width: 396, alignment: .top)
+                          .frame(maxWidth: /*@START_MENU_TOKEN@*/.infinity/*@END_MENU_TOKEN@*/, alignment: .top)
                           .background(Color(red: 0.19, green: 0.69, blue: 0.78))
                           .foregroundColor(.white)
                 }
             }
             .background(Color(red: 0.92, green: 0.87, blue: 0.81))
+            .cornerRadius(40)
+            
         }
     }
 }

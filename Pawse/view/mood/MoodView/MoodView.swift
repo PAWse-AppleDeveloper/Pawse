@@ -13,7 +13,12 @@ struct MoodView: View {
     var body: some View {
         VStack {
             if moodViewModel.user != nil && moodViewModel.currentStory != nil {
-                
+                HStack {
+                    Spacer()
+                    Image("PAWSE")
+                    Spacer()
+                }
+                .padding()
                 CatView(user: moodViewModel.user ?? User.empty, story: moodViewModel.currentStory ?? Story.empty)
                 QuestView(quests: moodViewModel.quests ?? [])
             } else {

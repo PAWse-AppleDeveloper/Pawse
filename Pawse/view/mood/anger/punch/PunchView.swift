@@ -91,10 +91,21 @@ struct PunchView: View {
     }
 
     func randomPosition() -> CGPoint {
+        let frameWidth: CGFloat = 400
+        let frameHeight: CGFloat = 400
+
         let screenWidth = UIScreen.main.bounds.width
         let screenHeight = UIScreen.main.bounds.height
-        let x = CGFloat.random(in: 50...(screenWidth - 50))
-        let y = CGFloat.random(in: 150...(screenHeight - 50))
+
+        let xMin = (screenWidth - frameWidth) / 2
+        let xMax = xMin + frameWidth
+
+        let yMin = (screenHeight - frameHeight) / 2
+        let yMax = yMin + frameHeight
+
+        let x = CGFloat.random(in: xMin...(xMax - 50))
+        let y = CGFloat.random(in: yMin...(yMax - 50))
+
         return CGPoint(x: x, y: y)
     }
 

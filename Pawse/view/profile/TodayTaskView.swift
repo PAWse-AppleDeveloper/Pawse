@@ -12,16 +12,17 @@ struct TodayTaskView: View {
     let notCompletedTasks: Int
     
     var body: some View {
-        HStack(alignment: .center, spacing: 10) {
-            VStack {
-                Text("Today's Task")
-                    .font(.title2)
-                    .fontWeight(.bold)
-                    .padding(.bottom, 8)
+        ZStack {
+            HStack(alignment: .center, spacing: 10) {
+                VStack {
+                    Text("Today's Task")
+                        .font(.title2)
+                        .fontWeight(.bold)
+                        .padding(.bottom, 8)
+                    
+                    CircularProgressView(completedTasks: completedTasks, notCompletedTasks: notCompletedTasks)
+                }
                 
-                CircularProgressView(completedTasks: completedTasks, notCompletedTasks: notCompletedTasks)
-            }
-            
                 VStack(alignment: .center) {
                     Text("\(completedTasks)")
                         .font(.title)
@@ -33,12 +34,22 @@ struct TodayTaskView: View {
                     Text("not completed")
                         .font(.subheadline)
                         .foregroundColor(.gray)
-                }.offset(y: 20)
+                }
                 
+            }.padding(.bottom, 36)
             
         }
-        .frame(maxWidth: .infinity)
-        .padding(.horizontal)
+        .padding(.horizontal, 24)
+            .padding(.vertical, 16)
+            .frame(width: 356, height: 300, alignment: .leading)
+            .background(Color(red: 0.99, green: 0.96, blue: 0.92))
+            .opacity(0.5)
+            .cornerRadius(25)
+            .overlay(
+              RoundedRectangle(cornerRadius: 25)
+                .inset(by: 0.5)
+                .stroke(Color(red: 1, green: 0.85, blue: 0.64), lineWidth: 1)
+        )
         
     }
 }
@@ -64,7 +75,7 @@ struct CircularProgressView: View {
                 .foregroundColor(.orange)
                 .rotationEffect(Angle(degrees: 270))
         }
-        
+
         .padding(.horizontal, 60)
         .padding(.top)
     }

@@ -52,6 +52,7 @@
 		234AA65B2C2DB13000379E20 /* loading screen.json in Resources */ = {isa = PBXBuildFile; fileRef = 234AA65A2C2DB13000379E20 /* loading screen.json */; };
 		234AA65E2C2DB28600379E20 /* JournalingQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA65D2C2DB28600379E20 /* JournalingQuestView.swift */; };
 		234AA6622C2DB76900379E20 /* congratulations.json in Resources */ = {isa = PBXBuildFile; fileRef = 234AA6612C2DB76800379E20 /* congratulations.json */; };
+		234AA6652C2DBC7300379E20 /* TitanOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 234AA6642C2DBC7300379E20 /* TitanOne-Regular.ttf */; };
 		23502D962C295A1600D7F42A /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D952C295A1600D7F42A /* GoogleGenerativeAI */; };
 		23502D9A2C295C3700D7F42A /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D992C295C3700D7F42A /* DotLottie */; };
 		23502D9C2C295D4700D7F42A /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */; };
@@ -147,6 +148,8 @@
 		234AA65A2C2DB13000379E20 /* loading screen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loading screen.json"; sourceTree = "<group>"; };
 		234AA65D2C2DB28600379E20 /* JournalingQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalingQuestView.swift; sourceTree = "<group>"; };
 		234AA6612C2DB76800379E20 /* congratulations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = congratulations.json; sourceTree = "<group>"; };
+		234AA6642C2DBC7300379E20 /* TitanOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitanOne-Regular.ttf"; sourceTree = "<group>"; };
+		234AA6662C2DBE6E00379E20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		23502D9D2C295E0B00D7F42A /* JournalResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalResultView.swift; sourceTree = "<group>"; };
 		23502DA02C295F4600D7F42A /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
@@ -375,12 +378,14 @@
 		237BC77F2C25BD710065225C /* Pawse */ = {
 			isa = PBXGroup;
 			children = (
+				234AA6662C2DBE6E00379E20 /* Info.plist */,
 				23502D9F2C295F3C00D7F42A /* config */,
 				23ECD64C2C26EF1900DD013F /* model */,
 				23ECD6492C26ED1100DD013F /* service */,
 				237BC7AA2C269C700065225C /* utils */,
 				237BC7A22C268EE70065225C /* view */,
 				237BC7A12C26718A0065225C /* Pawse.entitlements */,
+				234AA6642C2DBC7300379E20 /* TitanOne-Regular.ttf */,
 				23502DA42C2968CB00D7F42A /* GenerativeAI-Info.plist */,
 				235DC4382C2B2753004F5F64 /* GoogleService-Info.plist */,
 				237BC7802C25BD710065225C /* PawseApp.swift */,
@@ -590,6 +595,7 @@
 				16DD301B2C2C71D6004681A2 /* Weightless.mp3 in Resources */,
 				237BC7882C25BD730065225C /* Preview Assets.xcassets in Resources */,
 				235DC4222C2A85B1004F5F64 /* lukis.json in Resources */,
+				234AA6652C2DBC7300379E20 /* TitanOne-Regular.ttf in Resources */,
 				23502DA52C2968CB00D7F42A /* GenerativeAI-Info.plist in Resources */,
 				16DD301A2C2C71D6004681A2 /* Gymnopede.mp3 in Resources */,
 				16DD30122C2C6A2F004681A2 /* Assets.xcassets in Resources */,
@@ -817,6 +823,7 @@
 				DEVELOPMENT_TEAM = BHS88Y2WBP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pawse/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -851,6 +858,7 @@
 				DEVELOPMENT_TEAM = BHS88Y2WBP;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Pawse/Info.plist;
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "";
 				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
