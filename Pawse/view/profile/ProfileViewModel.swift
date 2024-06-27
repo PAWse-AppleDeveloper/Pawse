@@ -12,14 +12,14 @@ class ProfileViewModel: ObservableObject {
     @Published var quests: [Quest]?
     @Published var user: User?
     @Published var uncompletedQuests: Int = 0
-    @Published var totalQuests: Int = 0
+    @Published var completedQuests: Int = 0
     
     private var storyService = StoryService()
     private var questService = QuestService()
     private var profileService = ProfileService()
     
     init() {
-        fetchProfile()
+        self.fetchProfile()
     }
     
     private func fetchProfile() {
@@ -57,9 +57,9 @@ class ProfileViewModel: ObservableObject {
         }
     }
     
-    private func updateQuestCounts() {
+    public func updateQuestCounts() {
         guard let quests = quests else { return }
-        self.totalQuests = quests.count
+        self.completedQuests = quests.filter { $0.isCompleted }.count
         self.uncompletedQuests = quests.filter { !$0.isCompleted }.count
     }
 }
