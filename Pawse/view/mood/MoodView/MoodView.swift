@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MoodView: View {
     @ObservedObject private var moodViewModel = MoodViewModel()
+    
     var body: some View {
         VStack {
             if moodViewModel.user != nil && moodViewModel.currentStory != nil {

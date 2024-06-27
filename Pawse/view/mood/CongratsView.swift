@@ -17,12 +17,8 @@ struct CongratsView: View {
     var body: some View {
         VStack{
             VStack{
-                DotLottieAnimation(
-                    fileName: "congratulations",
-                    config: AnimationConfig(autoplay: true, loop: true)
-                )
-                .view()
-                .frame(width: 400, height: 400)
+                LottieView(name: "congratulations", loopMode: .loop)
+                    .frame(width: 400, height: 400)
                 Text("Congratulations!")
                     .bold()
                     .multilineTextAlignment(.center)
