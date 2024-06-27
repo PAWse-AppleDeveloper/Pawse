@@ -37,7 +37,6 @@
 		235DC4202C2A82EA004F5F64 /* cemas-2.json in Resources */ = {isa = PBXBuildFile; fileRef = 235DC41F2C2A82EA004F5F64 /* cemas-2.json */; };
 		235DC4222C2A85B1004F5F64 /* lukis.json in Resources */ = {isa = PBXBuildFile; fileRef = 235DC4212C2A85B1004F5F64 /* lukis.json */; };
 		235DC4272C2AA15A004F5F64 /* ShoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DC4262C2AA15A004F5F64 /* ShoutView.swift */; };
-		235DC4292C2AA161004F5F64 /* PunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DC4282C2AA161004F5F64 /* PunchView.swift */; };
 		235DC42B2C2AA589004F5F64 /* DrawViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DC42A2C2AA589004F5F64 /* DrawViewModel.swift */; };
 		235DC42D2C2AC411004F5F64 /* AudioDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DC42C2C2AC411004F5F64 /* AudioDetector.swift */; };
 		235DC4302C2AC46D004F5F64 /* ShoutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235DC42F2C2AC46D004F5F64 /* ShoutViewModel.swift */; };
@@ -61,6 +60,7 @@
 		23913EA12C2C3A32008A576F /* cemas homepage.json in Resources */ = {isa = PBXBuildFile; fileRef = 23913EA02C2C3A32008A576F /* cemas homepage.json */; };
 		23913EA32C2C3A38008A576F /* sedih homepage.json in Resources */ = {isa = PBXBuildFile; fileRef = 23913EA22C2C3A38008A576F /* sedih homepage.json */; };
 		23913EA52C2C3A42008A576F /* congratulations.json in Resources */ = {isa = PBXBuildFile; fileRef = 23913EA42C2C3A42008A576F /* congratulations.json */; };
+		23913EAE2C2C5D12008A576F /* PunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23913EAD2C2C5D12008A576F /* PunchView.swift */; };
 		23AA9E2D2C294D5400F18AF8 /* UserQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA9E2C2C294D5400F18AF8 /* UserQuest.swift */; };
 		23CB32B22C2951B7003C20E8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CB32B12C2951B7003C20E8 /* ProfileView.swift */; };
 		23ECD64B2C26ED2100DD013F /* StoryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ECD64A2C26ED2100DD013F /* StoryService.swift */; };
@@ -100,7 +100,6 @@
 		235DC41F2C2A82EA004F5F64 /* cemas-2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cemas-2.json"; sourceTree = "<group>"; };
 		235DC4212C2A85B1004F5F64 /* lukis.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = lukis.json; sourceTree = "<group>"; };
 		235DC4262C2AA15A004F5F64 /* ShoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoutView.swift; sourceTree = "<group>"; };
-		235DC4282C2AA161004F5F64 /* PunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchView.swift; sourceTree = "<group>"; };
 		235DC42A2C2AA589004F5F64 /* DrawViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrawViewModel.swift; sourceTree = "<group>"; };
 		235DC42C2C2AC411004F5F64 /* AudioDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioDetector.swift; sourceTree = "<group>"; };
 		235DC42F2C2AC46D004F5F64 /* ShoutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoutViewModel.swift; sourceTree = "<group>"; };
@@ -120,6 +119,7 @@
 		23913EA22C2C3A38008A576F /* sedih homepage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "sedih homepage.json"; sourceTree = "<group>"; };
 		23913EA42C2C3A42008A576F /* congratulations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = congratulations.json; sourceTree = "<group>"; };
 		23913EA92C2C4844008A576F /* congratulations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = congratulations.json; sourceTree = "<group>"; };
+		23913EAD2C2C5D12008A576F /* PunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchView.swift; sourceTree = "<group>"; };
 		23AA9E2C2C294D5400F18AF8 /* UserQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQuest.swift; sourceTree = "<group>"; };
 		23CB32B12C2951B7003C20E8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		23ECD64A2C26ED2100DD013F /* StoryService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryService.swift; sourceTree = "<group>"; };
@@ -207,8 +207,8 @@
 		235DC4232C2AA11D004F5F64 /* anger */ = {
 			isa = PBXGroup;
 			children = (
+				23913EAC2C2C5CF7008A576F /* punch */,
 				235DC42E2C2AC44E004F5F64 /* shout */,
-				235DC4282C2AA161004F5F64 /* PunchView.swift */,
 			);
 			path = anger;
 			sourceTree = "<group>";
@@ -311,6 +311,14 @@
 				23913EA92C2C4844008A576F /* congratulations.json */,
 			);
 			path = assets;
+			sourceTree = "<group>";
+		};
+		23913EAC2C2C5CF7008A576F /* punch */ = {
+			isa = PBXGroup;
+			children = (
+				23913EAD2C2C5D12008A576F /* PunchView.swift */,
+			);
+			path = punch;
 			sourceTree = "<group>";
 		};
 		23ECD6482C26EB8100DD013F /* auth */ = {
@@ -471,7 +479,6 @@
 				235DC42D2C2AC411004F5F64 /* AudioDetector.swift in Sources */,
 				23ECD65C2C291C9A00DD013F /* QuestService.swift in Sources */,
 				160B30632C2AAC530011E6D7 /* CardView.swift in Sources */,
-				235DC4292C2AA161004F5F64 /* PunchView.swift in Sources */,
 				23502DA12C295F4600D7F42A /* APIKey.swift in Sources */,
 				235DC4162C2A6E2A004F5F64 /* DrawView.swift in Sources */,
 				237BC7832C25BD710065225C /* ContentView.swift in Sources */,
@@ -500,6 +507,7 @@
 				23ECD65F2C291DAF00DD013F /* JournalView.swift in Sources */,
 				235DC4372C2B0DC5004F5F64 /* RegisterView.swift in Sources */,
 				160B30642C2AAC530011E6D7 /* CatView.swift in Sources */,
+				23913EAE2C2C5D12008A576F /* PunchView.swift in Sources */,
 				235DC40F2C29C77B004F5F64 /* JournalViewModel.swift in Sources */,
 				237BC7A42C268EFB0065225C /* AuthenticationViewModel.swift in Sources */,
 				160B306B2C2AAC910011E6D7 /* ShopView.swift in Sources */,

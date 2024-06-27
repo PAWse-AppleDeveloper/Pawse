@@ -11,7 +11,7 @@ struct CardView: View {
     let quest: Quest
     
     var body: some View {
-        var progress: Float = Float(quest.duration / quest.progress)
+        let progressPercentage: Float = (Float(quest.progress) / Float(quest.duration)) * 100
         HStack(alignment: .center, spacing: 24) {
             Image(systemName: quest.icon)
                 .frame(width: 48, height: 48)
@@ -44,7 +44,7 @@ struct CardView: View {
                     Text(quest.isCompleted ? "Progress: completed" : "Progress: uncompleted")
                       .font(Font.custom("SF Pro", size: 12))
                       .foregroundColor(Color(red: 0.68, green: 0.39, blue: 0))
-                    ProgressView(value: progress)
+                    ProgressView(value: progressPercentage)
                         .progressViewStyle(LinearProgressViewStyle(tint: .orange))
                         .frame(height: 4)
                         .cornerRadius(2)

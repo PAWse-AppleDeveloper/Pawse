@@ -14,12 +14,35 @@ struct ContentView: View {
         Group {
             NavigationStack {
                 if authViewModel.isLoggedIn {
-                    MoodView()
+                    TabView {
+                        Group {
+                            MoodView()
+                                .tabItem {
+                                    Image(systemName: "face.smiling.fill")
+                                    Text("Mood")
+                                }
+
+                            ShopView()
+                                .tabItem {
+                                    Image(systemName: "music.note.house.fill")
+                                    Text("Shop")
+                                }
+
+                            ProfileView()
+                                .tabItem {
+                                    Image(systemName: "person.circle")
+                                    Text("Profile")
+                                }
+                        }
+                    }
                 } else {
                     LoginView()
                 }
             }
             .environmentObject(authViewModel)
+        }
+        .onAppear {
+            UITabBar.appearance().backgroundColor = .white
         }
     }
 }

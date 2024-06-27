@@ -9,9 +9,10 @@ import Foundation
 import FirebaseAuth
 
 class AuthenticationViewModel: ObservableObject {
-    @Published var isLoggedIn = false
+    @Published var isLoggedIn = true
         
     init() {
+        self.logout()
         self.checkUserLoggedIn()
     }
     
