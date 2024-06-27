@@ -15,7 +15,7 @@ class AudioDetector: ObservableObject {
     @Published var isSuccess = false
     @Published var currentLevel: Float = -160.0
 
-    private let loudnessThreshold: Float = -5
+    private let loudnessThreshold: Float = -2
 
     init() {
         requestMicrophoneAccess()

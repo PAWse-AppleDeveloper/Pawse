@@ -19,10 +19,6 @@ struct ProfileView: View {
             TodayTaskView(completedTasks: profileViewModel.completedQuests, notCompletedTasks: profileViewModel.uncompletedQuests)
                 .padding(.top, 36.0)
             Spacer()
-//                NavigationLink(destination: CalendarView()) {
-//                    JournalLinkView()
-//                }
-            Spacer()
         }
         .padding()
         .navigationBarBackButtonHidden()

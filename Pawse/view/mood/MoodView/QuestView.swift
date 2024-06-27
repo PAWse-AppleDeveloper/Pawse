@@ -47,6 +47,14 @@ struct QuestView: View {
             ShoutView(quest: quest)
         case "Punch":
             PunchView(quest: quest)
+        case "Journal_Anxiety":
+            JournalS1(quest: quest)
+        case "Meditation":
+            MeditationS1View(quest: quest)
+        case "Challenges":
+            ChallangeS1View(quest: quest)
+        case "Sharing":
+            SharingView(quest: quest)
         default:
             Text("Unknown destination")
         }

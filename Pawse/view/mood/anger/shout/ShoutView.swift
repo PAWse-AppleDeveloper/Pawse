@@ -50,20 +50,7 @@ struct ShoutView: View {
                 .frame(height: 400)
             }
             
-            Button {
-                audioDetector.startMonitoring()
-            } label: {
-                VStack(spacing: 16) {
-                    Image("microfon")
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 200)
-                                .stroke(Color(red: 1, green: 0.73, blue: 0.25).opacity(0.3), lineWidth: 4)
-                        )
-                    Text("tap to shout out")
-                        .font(.caption2)
-                        .foregroundStyle(.gray)
-                }
-            }
+            
             if audioDetector.isSuccess {
                 Button {
                     shoutViewModel.navigateToCongratsView = true
@@ -74,6 +61,21 @@ struct ShoutView: View {
                         .frame(maxWidth: .infinity)
                         .background(Color.biruTuaSlider)
                         .cornerRadius(16)
+                }
+            } else {
+                Button {
+                    audioDetector.startMonitoring()
+                } label: {
+                    VStack(spacing: 16) {
+                        Image("microfon")
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 200)
+                                    .stroke(Color(red: 1, green: 0.73, blue: 0.25).opacity(0.3), lineWidth: 4)
+                            )
+                        Text("tap to shout out")
+                            .font(.caption2)
+                            .foregroundStyle(.gray)
+                    }
                 }
             }
         }

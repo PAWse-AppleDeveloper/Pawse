@@ -56,9 +56,9 @@ extension Quest {
       switch type {
       case .Sad:
           return [
-            Quest(date: currentDate,name: "Share", icon: "mic",description: "tell your story", type: .Sad, navigation: "", coin: 3, duration: 300, progress: 0, isCompleted: false, storyId: storyId),
-            Quest(date: currentDate,name: "Draw", icon: "pencil.line",description: "draw anything you want", type: .Sad, navigation: "", coin: 3, duration: 300, progress: 0, isCompleted: false, storyId: storyId),
-            Quest(date: currentDate,name: "Journal", icon: "book",description: "tell 3 things that you grateful", type: .Sad, navigation: "", coin: 3, duration: 300, progress: 0, isCompleted: false, storyId: storyId)
+            Quest(date: currentDate,name: "Share", icon: "mic",description: "tell your story", type: .Sad, navigation: "Sharing", coin: 3, duration: 300, progress: 0, isCompleted: false, storyId: storyId),
+            Quest(date: currentDate,name: "Draw", icon: "pencil.line",description: "draw anything you want", type: .Sad, navigation: "Draw", coin: 3, duration: 300, progress: 0, isCompleted: false, storyId: storyId),
+            Quest(date: currentDate,name: "Journal", icon: "book",description: "tell 3 things that you grateful", type: .Sad, navigation: "Journal_Sad", coin: 3, duration: 300, progress: 0, isCompleted: false, storyId: storyId)
           ]
       case .Angry:
           return [
@@ -70,7 +70,7 @@ extension Quest {
           return [
             Quest(date: currentDate,name: "Meditation",icon:"figure",description: "relax yourself", type: .Anxiety, navigation: "Meditation", coin: 3, duration: 300, progress: 0, isCompleted: false, storyId: storyId),
             Quest(date: currentDate,name: "Challenges", icon: "flag.checkered",description: "follow the step to relax yourself", type: .Anxiety, navigation: "Challenges", coin: 3, duration: 300, progress: 0, isCompleted: false, storyId: storyId),
-            Quest(date: currentDate,name: "Journal", icon: "book",description: "answer all the questions", type: .Anxiety, navigation: "Journal", coin: 3, duration: 300, progress: 0, isCompleted: false, storyId: storyId)
+            Quest(date: currentDate,name: "Journal", icon: "book",description: "answer all the questions", type: .Anxiety, navigation: "Journal_Anxiety", coin: 3, duration: 300, progress: 0, isCompleted: false, storyId: storyId)
           ]
       }
   }

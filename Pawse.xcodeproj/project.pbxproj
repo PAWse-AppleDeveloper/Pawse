@@ -27,6 +27,26 @@
 		234AA6232C2D92D400379E20 /* ProfileViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6222C2D92D400379E20 /* ProfileViewModel.swift */; };
 		234AA6252C2D9AF200379E20 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6242C2D9AF200379E20 /* Profile.swift */; };
 		234AA6272C2D9C4B00379E20 /* TodayTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6262C2D9C4B00379E20 /* TodayTaskView.swift */; };
+		234AA62B2C2DA00B00379E20 /* MeditationS1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA62A2C2DA00B00379E20 /* MeditationS1View.swift */; };
+		234AA62D2C2DA02700379E20 /* MeditationS2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA62C2C2DA02700379E20 /* MeditationS2.swift */; };
+		234AA62F2C2DA04300379E20 /* MeditationS3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA62E2C2DA04300379E20 /* MeditationS3.swift */; };
+		234AA6322C2DA08B00379E20 /* Components.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6312C2DA08B00379E20 /* Components.swift */; };
+		234AA6352C2DA0C400379E20 /* JournalS1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6342C2DA0C400379E20 /* JournalS1.swift */; };
+		234AA6372C2DA12400379E20 /* JournalS2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6362C2DA12400379E20 /* JournalS2.swift */; };
+		234AA6392C2DA16800379E20 /* JournalS3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6382C2DA16800379E20 /* JournalS3.swift */; };
+		234AA63B2C2DA17D00379E20 /* JournalS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA63A2C2DA17D00379E20 /* JournalS4.swift */; };
+		234AA63D2C2DA19C00379E20 /* JournalS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA63C2C2DA19C00379E20 /* JournalS5.swift */; };
+		234AA63F2C2DA1AE00379E20 /* JournalS6.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA63E2C2DA1AE00379E20 /* JournalS6.swift */; };
+		234AA6412C2DA1C400379E20 /* JournalS7.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6402C2DA1C400379E20 /* JournalS7.swift */; };
+		234AA6432C2DA1D900379E20 /* JournalS8.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6422C2DA1D900379E20 /* JournalS8.swift */; };
+		234AA6452C2DA1FA00379E20 /* TemplateJournal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6442C2DA1FA00379E20 /* TemplateJournal.swift */; };
+		234AA6472C2DA51C00379E20 /* Audio.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6462C2DA51C00379E20 /* Audio.swift */; };
+		234AA64A2C2DA5C700379E20 /* ChallengeS1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6492C2DA5C600379E20 /* ChallengeS1View.swift */; };
+		234AA64C2C2DA60800379E20 /* ChallengeS2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA64B2C2DA60800379E20 /* ChallengeS2View.swift */; };
+		234AA64E2C2DA61E00379E20 /* ChallengeS3.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA64D2C2DA61E00379E20 /* ChallengeS3.swift */; };
+		234AA6502C2DA63200379E20 /* ChallengeS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA64F2C2DA63200379E20 /* ChallengeS4.swift */; };
+		234AA6522C2DA64400379E20 /* ChallengeS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6512C2DA64400379E20 /* ChallengeS5.swift */; };
+		234AA6552C2DA71F00379E20 /* SharingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6542C2DA71F00379E20 /* SharingView.swift */; };
 		23502D962C295A1600D7F42A /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D952C295A1600D7F42A /* GoogleGenerativeAI */; };
 		23502D9A2C295C3700D7F42A /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D992C295C3700D7F42A /* DotLottie */; };
 		23502D9C2C295D4700D7F42A /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */; };
@@ -98,6 +118,26 @@
 		234AA6222C2D92D400379E20 /* ProfileViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewModel.swift; sourceTree = "<group>"; };
 		234AA6242C2D9AF200379E20 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
 		234AA6262C2D9C4B00379E20 /* TodayTaskView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodayTaskView.swift; sourceTree = "<group>"; };
+		234AA62A2C2DA00B00379E20 /* MeditationS1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationS1View.swift; sourceTree = "<group>"; };
+		234AA62C2C2DA02700379E20 /* MeditationS2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationS2.swift; sourceTree = "<group>"; };
+		234AA62E2C2DA04300379E20 /* MeditationS3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeditationS3.swift; sourceTree = "<group>"; };
+		234AA6312C2DA08B00379E20 /* Components.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Components.swift; sourceTree = "<group>"; };
+		234AA6342C2DA0C400379E20 /* JournalS1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalS1.swift; sourceTree = "<group>"; };
+		234AA6362C2DA12400379E20 /* JournalS2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalS2.swift; sourceTree = "<group>"; };
+		234AA6382C2DA16800379E20 /* JournalS3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalS3.swift; sourceTree = "<group>"; };
+		234AA63A2C2DA17D00379E20 /* JournalS4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalS4.swift; sourceTree = "<group>"; };
+		234AA63C2C2DA19C00379E20 /* JournalS5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalS5.swift; sourceTree = "<group>"; };
+		234AA63E2C2DA1AE00379E20 /* JournalS6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalS6.swift; sourceTree = "<group>"; };
+		234AA6402C2DA1C400379E20 /* JournalS7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalS7.swift; sourceTree = "<group>"; };
+		234AA6422C2DA1D900379E20 /* JournalS8.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalS8.swift; sourceTree = "<group>"; };
+		234AA6442C2DA1FA00379E20 /* TemplateJournal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateJournal.swift; sourceTree = "<group>"; };
+		234AA6462C2DA51C00379E20 /* Audio.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Audio.swift; sourceTree = "<group>"; };
+		234AA6492C2DA5C600379E20 /* ChallengeS1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeS1View.swift; sourceTree = "<group>"; };
+		234AA64B2C2DA60800379E20 /* ChallengeS2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeS2View.swift; sourceTree = "<group>"; };
+		234AA64D2C2DA61E00379E20 /* ChallengeS3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeS3.swift; sourceTree = "<group>"; };
+		234AA64F2C2DA63200379E20 /* ChallengeS4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeS4.swift; sourceTree = "<group>"; };
+		234AA6512C2DA64400379E20 /* ChallengeS5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeS5.swift; sourceTree = "<group>"; };
+		234AA6542C2DA71F00379E20 /* SharingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingView.swift; sourceTree = "<group>"; };
 		23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		23502D9D2C295E0B00D7F42A /* JournalResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalResultView.swift; sourceTree = "<group>"; };
 		23502DA02C295F4600D7F42A /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
@@ -190,6 +230,71 @@
 			path = ShopView;
 			sourceTree = "<group>";
 		};
+		234AA6282C2D9F7D00379E20 /* anxiety */ = {
+			isa = PBXGroup;
+			children = (
+				234AA6482C2DA5A100379E20 /* challenges */,
+				234AA6332C2DA0B700379E20 /* journal */,
+				234AA6292C2D9FF100379E20 /* meditation */,
+			);
+			path = anxiety;
+			sourceTree = "<group>";
+		};
+		234AA6292C2D9FF100379E20 /* meditation */ = {
+			isa = PBXGroup;
+			children = (
+				234AA6302C2DA06F00379E20 /* components */,
+				234AA62A2C2DA00B00379E20 /* MeditationS1View.swift */,
+				234AA62C2C2DA02700379E20 /* MeditationS2.swift */,
+				234AA62E2C2DA04300379E20 /* MeditationS3.swift */,
+			);
+			path = meditation;
+			sourceTree = "<group>";
+		};
+		234AA6302C2DA06F00379E20 /* components */ = {
+			isa = PBXGroup;
+			children = (
+				234AA6312C2DA08B00379E20 /* Components.swift */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		234AA6332C2DA0B700379E20 /* journal */ = {
+			isa = PBXGroup;
+			children = (
+				234AA6342C2DA0C400379E20 /* JournalS1.swift */,
+				234AA6362C2DA12400379E20 /* JournalS2.swift */,
+				234AA6382C2DA16800379E20 /* JournalS3.swift */,
+				234AA63A2C2DA17D00379E20 /* JournalS4.swift */,
+				234AA63C2C2DA19C00379E20 /* JournalS5.swift */,
+				234AA63E2C2DA1AE00379E20 /* JournalS6.swift */,
+				234AA6402C2DA1C400379E20 /* JournalS7.swift */,
+				234AA6422C2DA1D900379E20 /* JournalS8.swift */,
+				234AA6442C2DA1FA00379E20 /* TemplateJournal.swift */,
+			);
+			path = journal;
+			sourceTree = "<group>";
+		};
+		234AA6482C2DA5A100379E20 /* challenges */ = {
+			isa = PBXGroup;
+			children = (
+				234AA6492C2DA5C600379E20 /* ChallengeS1View.swift */,
+				234AA64B2C2DA60800379E20 /* ChallengeS2View.swift */,
+				234AA64D2C2DA61E00379E20 /* ChallengeS3.swift */,
+				234AA64F2C2DA63200379E20 /* ChallengeS4.swift */,
+				234AA6512C2DA64400379E20 /* ChallengeS5.swift */,
+			);
+			path = challenges;
+			sourceTree = "<group>";
+		};
+		234AA6532C2DA6E300379E20 /* sharing */ = {
+			isa = PBXGroup;
+			children = (
+				234AA6542C2DA71F00379E20 /* SharingView.swift */,
+			);
+			path = sharing;
+			sourceTree = "<group>";
+		};
 		23502D9F2C295F3C00D7F42A /* config */ = {
 			isa = PBXGroup;
 			children = (
@@ -201,6 +306,7 @@
 		235DC4132C2A6DC8004F5F64 /* sad */ = {
 			isa = PBXGroup;
 			children = (
+				234AA6532C2DA6E300379E20 /* sharing */,
 				235DC4142C2A6E1A004F5F64 /* draw */,
 			);
 			path = sad;
@@ -295,6 +401,7 @@
 		237BC7A72C269C130065225C /* mood */ = {
 			isa = PBXGroup;
 			children = (
+				234AA6282C2D9F7D00379E20 /* anxiety */,
 				160B30622C2AAC530011E6D7 /* MoodView */,
 				235DC4232C2AA11D004F5F64 /* anger */,
 				235DC4132C2A6DC8004F5F64 /* sad */,
@@ -308,6 +415,7 @@
 			isa = PBXGroup;
 			children = (
 				237BC7AB2C269C7B0065225C /* Route.swift */,
+				234AA6462C2DA51C00379E20 /* Audio.swift */,
 			);
 			path = utils;
 			sourceTree = "<group>";
@@ -493,49 +601,69 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234AA6432C2DA1D900379E20 /* JournalS8.swift in Sources */,
 				160B30652C2AAC530011E6D7 /* LottieView.swift in Sources */,
+				234AA6322C2DA08B00379E20 /* Components.swift in Sources */,
 				235DC42D2C2AC411004F5F64 /* AudioDetector.swift in Sources */,
 				23ECD65C2C291C9A00DD013F /* QuestService.swift in Sources */,
 				160B30632C2AAC530011E6D7 /* CardView.swift in Sources */,
 				23502DA12C295F4600D7F42A /* APIKey.swift in Sources */,
+				234AA6392C2DA16800379E20 /* JournalS3.swift in Sources */,
 				235DC4162C2A6E2A004F5F64 /* DrawView.swift in Sources */,
 				234AA6232C2D92D400379E20 /* ProfileViewModel.swift in Sources */,
 				237BC7832C25BD710065225C /* ContentView.swift in Sources */,
+				234AA64C2C2DA60800379E20 /* ChallengeS2View.swift in Sources */,
 				235DC4352C2B0DB9004F5F64 /* LoginView.swift in Sources */,
+				234AA6522C2DA64400379E20 /* ChallengeS5.swift in Sources */,
 				234AA6252C2D9AF200379E20 /* Profile.swift in Sources */,
 				235DC4182C2A6EC7004F5F64 /* Shader.metal in Sources */,
 				23ECD6552C26F78300DD013F /* User.swift in Sources */,
 				23502D9E2C295E0B00D7F42A /* JournalResultView.swift in Sources */,
 				23502D9C2C295D4700D7F42A /* SpeechRecognizer.swift in Sources */,
+				234AA6552C2DA71F00379E20 /* SharingView.swift in Sources */,
 				16DD30162C2C702F004681A2 /* SongViewModel.swift in Sources */,
+				234AA6412C2DA1C400379E20 /* JournalS7.swift in Sources */,
 				235DC4272C2AA15A004F5F64 /* ShoutView.swift in Sources */,
 				237BC7812C25BD710065225C /* PawseApp.swift in Sources */,
+				234AA64E2C2DA61E00379E20 /* ChallengeS3.swift in Sources */,
 				23ECD6532C26F74D00DD013F /* ProfileService.swift in Sources */,
 				235DC42B2C2AA589004F5F64 /* DrawViewModel.swift in Sources */,
 				234AA61F2C2D8E4D00379E20 /* CongratsView.swift in Sources */,
 				235DC41A2C2A81EE004F5F64 /* DrawLottieView.swift in Sources */,
 				234AA6272C2D9C4B00379E20 /* TodayTaskView.swift in Sources */,
 				234AA6212C2D8E9800379E20 /* CongratsViewModel.swift in Sources */,
+				234AA6372C2DA12400379E20 /* JournalS2.swift in Sources */,
+				234AA64A2C2DA5C700379E20 /* ChallengeS1View.swift in Sources */,
 				23AA9E2D2C294D5400F18AF8 /* UserQuest.swift in Sources */,
 				235DC4112C29CE74004F5F64 /* MoodViewModel.swift in Sources */,
+				234AA63B2C2DA17D00379E20 /* JournalS4.swift in Sources */,
+				234AA63D2C2DA19C00379E20 /* JournalS5.swift in Sources */,
 				237BC7A62C2695580065225C /* SignInView.swift in Sources */,
+				234AA6502C2DA63200379E20 /* ChallengeS4.swift in Sources */,
 				235DC4302C2AC46D004F5F64 /* ShoutViewModel.swift in Sources */,
+				234AA6472C2DA51C00379E20 /* Audio.swift in Sources */,
 				160B30662C2AAC530011E6D7 /* MoodView.swift in Sources */,
 				160B30672C2AAC530011E6D7 /* QuestView.swift in Sources */,
+				234AA6452C2DA1FA00379E20 /* TemplateJournal.swift in Sources */,
+				234AA62B2C2DA00B00379E20 /* MeditationS1View.swift in Sources */,
 				23CB32B22C2951B7003C20E8 /* ProfileView.swift in Sources */,
 				237BC7AC2C269C7B0065225C /* Route.swift in Sources */,
 				23ECD6582C26FA0E00DD013F /* Quest.swift in Sources */,
 				23ECD64B2C26ED2100DD013F /* StoryService.swift in Sources */,
 				160B306C2C2AAC910011E6D7 /* SongCardView.swift in Sources */,
+				234AA6352C2DA0C400379E20 /* JournalS1.swift in Sources */,
 				234AA61A2C2D8B3300379E20 /* SongStorage.swift in Sources */,
 				23ECD65F2C291DAF00DD013F /* JournalView.swift in Sources */,
 				235DC4372C2B0DC5004F5F64 /* RegisterView.swift in Sources */,
 				160B30642C2AAC530011E6D7 /* CatView.swift in Sources */,
 				23913EAE2C2C5D12008A576F /* PunchView.swift in Sources */,
+				234AA63F2C2DA1AE00379E20 /* JournalS6.swift in Sources */,
 				235DC40F2C29C77B004F5F64 /* JournalViewModel.swift in Sources */,
 				237BC7A42C268EFB0065225C /* AuthenticationViewModel.swift in Sources */,
+				234AA62F2C2DA04300379E20 /* MeditationS3.swift in Sources */,
 				160B306B2C2AAC910011E6D7 /* ShopView.swift in Sources */,
 				23ECD64E2C26EF3000DD013F /* Story.swift in Sources */,
+				234AA62D2C2DA02700379E20 /* MeditationS2.swift in Sources */,
 				16DD30142C2C6FFA004681A2 /* Song.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
