@@ -19,7 +19,7 @@ struct DrawView: View {
     @State private var lines: [Line] = []
     @State private var replacement: Color = .black
     @State private var timerRunning = true
-    @State private var timeRemaining = 2
+    @State private var timeRemaining = 300
     
     
     @ObservedObject private var drawViewModel = DrawViewModel()
