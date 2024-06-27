@@ -47,6 +47,8 @@
 		234AA6502C2DA63200379E20 /* ChallengeS4.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA64F2C2DA63200379E20 /* ChallengeS4.swift */; };
 		234AA6522C2DA64400379E20 /* ChallengeS5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6512C2DA64400379E20 /* ChallengeS5.swift */; };
 		234AA6552C2DA71F00379E20 /* SharingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6542C2DA71F00379E20 /* SharingView.swift */; };
+		234AA6572C2DAA5900379E20 /* LoadingJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6562C2DAA5900379E20 /* LoadingJournalView.swift */; };
+		234AA6592C2DAAB700379E20 /* TypingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6582C2DAAB700379E20 /* TypingModifier.swift */; };
 		23502D962C295A1600D7F42A /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D952C295A1600D7F42A /* GoogleGenerativeAI */; };
 		23502D9A2C295C3700D7F42A /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D992C295C3700D7F42A /* DotLottie */; };
 		23502D9C2C295D4700D7F42A /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */; };
@@ -138,6 +140,8 @@
 		234AA64F2C2DA63200379E20 /* ChallengeS4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeS4.swift; sourceTree = "<group>"; };
 		234AA6512C2DA64400379E20 /* ChallengeS5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChallengeS5.swift; sourceTree = "<group>"; };
 		234AA6542C2DA71F00379E20 /* SharingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingView.swift; sourceTree = "<group>"; };
+		234AA6562C2DAA5900379E20 /* LoadingJournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingJournalView.swift; sourceTree = "<group>"; };
+		234AA6582C2DAAB700379E20 /* TypingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingModifier.swift; sourceTree = "<group>"; };
 		23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		23502D9D2C295E0B00D7F42A /* JournalResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalResultView.swift; sourceTree = "<group>"; };
 		23502DA02C295F4600D7F42A /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
@@ -495,7 +499,9 @@
 			children = (
 				23ECD65E2C291DAF00DD013F /* JournalView.swift */,
 				23502D9D2C295E0B00D7F42A /* JournalResultView.swift */,
+				234AA6562C2DAA5900379E20 /* LoadingJournalView.swift */,
 				235DC40E2C29C77B004F5F64 /* JournalViewModel.swift */,
+				234AA6582C2DAAB700379E20 /* TypingModifier.swift */,
 			);
 			path = journal;
 			sourceTree = "<group>";
@@ -612,6 +618,7 @@
 				235DC4162C2A6E2A004F5F64 /* DrawView.swift in Sources */,
 				234AA6232C2D92D400379E20 /* ProfileViewModel.swift in Sources */,
 				237BC7832C25BD710065225C /* ContentView.swift in Sources */,
+				234AA6572C2DAA5900379E20 /* LoadingJournalView.swift in Sources */,
 				234AA64C2C2DA60800379E20 /* ChallengeS2View.swift in Sources */,
 				235DC4352C2B0DB9004F5F64 /* LoginView.swift in Sources */,
 				234AA6522C2DA64400379E20 /* ChallengeS5.swift in Sources */,
@@ -619,6 +626,7 @@
 				235DC4182C2A6EC7004F5F64 /* Shader.metal in Sources */,
 				23ECD6552C26F78300DD013F /* User.swift in Sources */,
 				23502D9E2C295E0B00D7F42A /* JournalResultView.swift in Sources */,
+				234AA6592C2DAAB700379E20 /* TypingModifier.swift in Sources */,
 				23502D9C2C295D4700D7F42A /* SpeechRecognizer.swift in Sources */,
 				234AA6552C2DA71F00379E20 /* SharingView.swift in Sources */,
 				16DD30162C2C702F004681A2 /* SongViewModel.swift in Sources */,

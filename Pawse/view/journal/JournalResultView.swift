@@ -48,7 +48,7 @@ struct JournalResultView: View {
     @State private var sliderValue: Double = 7.0
     @State private var prompt = ""
     @State private var emotion = ""
-    @State private var navigateToMoodView = false
+    @State private var navigateToLoadingJournalView = false
     @ObservedObject private var journalViewModel = JournalViewModel()
     let model = GenerativeModel(name: "gemini-pro", apiKey: APIKey.default)
 
@@ -124,8 +124,8 @@ struct JournalResultView: View {
                 }
                 .padding()
             }
-            .navigationDestination(isPresented: $navigateToMoodView) {
-                MoodView()
+            .navigationDestination(isPresented: $navigateToLoadingJournalView) {
+                LoadingJournalView()
             }
         } else {
             LoadingView()
@@ -154,7 +154,7 @@ struct JournalResultView: View {
             journalViewModel.saveStory(story: story) { result in
                 switch result {
                 case .success:
-                    navigateToMoodView = true
+                    navigateToLoadingJournalView = true
                 case .failure(let error):
                     print("Error saving journal: \(error)")
                 }

@@ -59,7 +59,7 @@ struct CongratsView: View {
         }
         .navigationBarBackButtonHidden(true)
         .navigationDestination(isPresented: $congratsViewModel.navigateToMoodView, destination: {
-                    MoodView()
+                    ContentView()
                 })
     }
     
