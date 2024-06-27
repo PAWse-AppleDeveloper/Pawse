@@ -9,6 +9,7 @@ import Foundation
 
 class SongStorage {
     private let userDefaultsKey = "songs"
+    private let currentSongKey = "current_song"
     
     func saveSongs(_ songs: [Song]) {
         if let encoded = try? JSONEncoder().encode(songs) {
@@ -23,5 +24,20 @@ class SongStorage {
             }
         }
         return []
+    }
+    
+    func saveCurrentSong(_ song: Song) {
+        if let encoded = try? JSONEncoder().encode(song) {
+            UserDefaults.standard.set(encoded, forKey: currentSongKey)
+        }
+    }
+    
+    func loadCurrentSong() -> Song? {
+        if let savedData = UserDefaults.standard.data(forKey: currentSongKey) {
+            if let decoded = try? JSONDecoder().decode(Song.self, from: savedData) {
+                return decoded
+            }
+        }
+        return nil
     }
 }

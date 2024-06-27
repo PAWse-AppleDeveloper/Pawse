@@ -23,8 +23,12 @@ struct QuestView: View {
                     }
                     else {
                         ForEach(quests) { quest in
-                            NavigationLink(destination: destinationView(for: quest)) {
+                            if quest.isCompleted {
                                 CardView(quest: quest)
+                            } else {
+                                NavigationLink(destination: destinationView(for: quest)) {
+                                    CardView(quest: quest)
+                                }
                             }
                         }
                     }

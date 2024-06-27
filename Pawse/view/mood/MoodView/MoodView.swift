@@ -28,6 +28,9 @@ struct MoodView: View {
         .onAppear {
             moodViewModel.getLatestEmotion()
         }
+        .onDisappear {
+            moodViewModel.stopSound()
+        }
         .navigationBarBackButtonHidden(true)
         .padding(.horizontal, 16)
     }

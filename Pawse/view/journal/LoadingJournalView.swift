@@ -54,6 +54,7 @@ struct LoadingJournalView: View {
                 }
         }
         .padding(.horizontal, 20)
+        .navigationBarBackButtonHidden()
         .navigationDestination(isPresented: $shouldNavigate, destination: {
             ContentView()
         })

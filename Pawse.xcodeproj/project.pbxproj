@@ -53,6 +53,7 @@
 		234AA65E2C2DB28600379E20 /* JournalingQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA65D2C2DB28600379E20 /* JournalingQuestView.swift */; };
 		234AA6622C2DB76900379E20 /* congratulations.json in Resources */ = {isa = PBXBuildFile; fileRef = 234AA6612C2DB76800379E20 /* congratulations.json */; };
 		234AA6652C2DBC7300379E20 /* TitanOne-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 234AA6642C2DBC7300379E20 /* TitanOne-Regular.ttf */; };
+		234AA66A2C2DCDD100379E20 /* Nintendogs Cats Music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 234AA6692C2DCDD100379E20 /* Nintendogs Cats Music.mp3 */; };
 		23502D962C295A1600D7F42A /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D952C295A1600D7F42A /* GoogleGenerativeAI */; };
 		23502D9A2C295C3700D7F42A /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D992C295C3700D7F42A /* DotLottie */; };
 		23502D9C2C295D4700D7F42A /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */; };
@@ -150,6 +151,7 @@
 		234AA6612C2DB76800379E20 /* congratulations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = congratulations.json; sourceTree = "<group>"; };
 		234AA6642C2DBC7300379E20 /* TitanOne-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "TitanOne-Regular.ttf"; sourceTree = "<group>"; };
 		234AA6662C2DBE6E00379E20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		234AA6692C2DCDD100379E20 /* Nintendogs Cats Music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Nintendogs Cats Music.mp3"; sourceTree = "<group>"; };
 		23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		23502D9D2C295E0B00D7F42A /* JournalResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalResultView.swift; sourceTree = "<group>"; };
 		23502DA02C295F4600D7F42A /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
@@ -400,6 +402,7 @@
 				235DC4212C2A85B1004F5F64 /* lukis.json */,
 				23913E9E2C2C3A24008A576F /* marah homepage.json */,
 				16DD30112C2C6A2F004681A2 /* Assets.xcassets */,
+				234AA6692C2DCDD100379E20 /* Nintendogs Cats Music.mp3 */,
 				237BC7862C25BD730065225C /* Preview Content */,
 				235DC4172C2A6EC7004F5F64 /* Shader.metal */,
 			);
@@ -591,6 +594,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				234AA66A2C2DCDD100379E20 /* Nintendogs Cats Music.mp3 in Resources */,
 				235DC41C2C2A8299004F5F64 /* nangis-2.json in Resources */,
 				16DD301B2C2C71D6004681A2 /* Weightless.mp3 in Resources */,
 				237BC7882C25BD730065225C /* Preview Assets.xcassets in Resources */,

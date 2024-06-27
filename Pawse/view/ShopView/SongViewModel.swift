@@ -101,6 +101,7 @@ class SongViewModel: ObservableObject {
             audioPlayer?.play()
             currentlyPlayingSong = song
             isPlaying = true
+            songStorage.saveCurrentSong(song)
         } catch {
             print("Error playing audio: \(error.localizedDescription)")
         }
