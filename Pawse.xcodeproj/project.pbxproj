@@ -49,6 +49,8 @@
 		234AA6552C2DA71F00379E20 /* SharingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6542C2DA71F00379E20 /* SharingView.swift */; };
 		234AA6572C2DAA5900379E20 /* LoadingJournalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6562C2DAA5900379E20 /* LoadingJournalView.swift */; };
 		234AA6592C2DAAB700379E20 /* TypingModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA6582C2DAAB700379E20 /* TypingModifier.swift */; };
+		234AA65B2C2DB13000379E20 /* loading screen.json in Resources */ = {isa = PBXBuildFile; fileRef = 234AA65A2C2DB13000379E20 /* loading screen.json */; };
+		234AA65E2C2DB28600379E20 /* JournalingQuestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234AA65D2C2DB28600379E20 /* JournalingQuestView.swift */; };
 		23502D962C295A1600D7F42A /* GoogleGenerativeAI in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D952C295A1600D7F42A /* GoogleGenerativeAI */; };
 		23502D9A2C295C3700D7F42A /* DotLottie in Frameworks */ = {isa = PBXBuildFile; productRef = 23502D992C295C3700D7F42A /* DotLottie */; };
 		23502D9C2C295D4700D7F42A /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */; };
@@ -87,7 +89,6 @@
 		23913E9F2C2C3A24008A576F /* marah homepage.json in Resources */ = {isa = PBXBuildFile; fileRef = 23913E9E2C2C3A24008A576F /* marah homepage.json */; };
 		23913EA12C2C3A32008A576F /* cemas homepage.json in Resources */ = {isa = PBXBuildFile; fileRef = 23913EA02C2C3A32008A576F /* cemas homepage.json */; };
 		23913EA32C2C3A38008A576F /* sedih homepage.json in Resources */ = {isa = PBXBuildFile; fileRef = 23913EA22C2C3A38008A576F /* sedih homepage.json */; };
-		23913EA52C2C3A42008A576F /* congratulations.json in Resources */ = {isa = PBXBuildFile; fileRef = 23913EA42C2C3A42008A576F /* congratulations.json */; };
 		23913EAE2C2C5D12008A576F /* PunchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23913EAD2C2C5D12008A576F /* PunchView.swift */; };
 		23AA9E2D2C294D5400F18AF8 /* UserQuest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23AA9E2C2C294D5400F18AF8 /* UserQuest.swift */; };
 		23CB32B22C2951B7003C20E8 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CB32B12C2951B7003C20E8 /* ProfileView.swift */; };
@@ -142,6 +143,8 @@
 		234AA6542C2DA71F00379E20 /* SharingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SharingView.swift; sourceTree = "<group>"; };
 		234AA6562C2DAA5900379E20 /* LoadingJournalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingJournalView.swift; sourceTree = "<group>"; };
 		234AA6582C2DAAB700379E20 /* TypingModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypingModifier.swift; sourceTree = "<group>"; };
+		234AA65A2C2DB13000379E20 /* loading screen.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "loading screen.json"; sourceTree = "<group>"; };
+		234AA65D2C2DB28600379E20 /* JournalingQuestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalingQuestView.swift; sourceTree = "<group>"; };
 		23502D9B2C295D4700D7F42A /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
 		23502D9D2C295E0B00D7F42A /* JournalResultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JournalResultView.swift; sourceTree = "<group>"; };
 		23502DA02C295F4600D7F42A /* APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIKey.swift; sourceTree = "<group>"; };
@@ -173,8 +176,7 @@
 		23913E9E2C2C3A24008A576F /* marah homepage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "marah homepage.json"; sourceTree = "<group>"; };
 		23913EA02C2C3A32008A576F /* cemas homepage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "cemas homepage.json"; sourceTree = "<group>"; };
 		23913EA22C2C3A38008A576F /* sedih homepage.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "sedih homepage.json"; sourceTree = "<group>"; };
-		23913EA42C2C3A42008A576F /* congratulations.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = congratulations.json; sourceTree = "<group>"; };
-		23913EA92C2C4844008A576F /* congratulations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = congratulations.json; sourceTree = "<group>"; };
+		23913EA92C2C4844008A576F /* congratulations.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; name = congratulations.json; path = assets/congratulations.json; sourceTree = "<group>"; };
 		23913EAD2C2C5D12008A576F /* PunchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PunchView.swift; sourceTree = "<group>"; };
 		23AA9E2C2C294D5400F18AF8 /* UserQuest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserQuest.swift; sourceTree = "<group>"; };
 		23CB32B12C2951B7003C20E8 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -299,6 +301,14 @@
 			path = sharing;
 			sourceTree = "<group>";
 		};
+		234AA65C2C2DB26000379E20 /* journalSad */ = {
+			isa = PBXGroup;
+			children = (
+				234AA65D2C2DB28600379E20 /* JournalingQuestView.swift */,
+			);
+			path = journalSad;
+			sourceTree = "<group>";
+		};
 		23502D9F2C295F3C00D7F42A /* config */ = {
 			isa = PBXGroup;
 			children = (
@@ -310,6 +320,7 @@
 		235DC4132C2A6DC8004F5F64 /* sad */ = {
 			isa = PBXGroup;
 			children = (
+				234AA65C2C2DB26000379E20 /* journalSad */,
 				234AA6532C2DA6E300379E20 /* sharing */,
 				235DC4142C2A6E1A004F5F64 /* draw */,
 			);
@@ -373,8 +384,15 @@
 				235DC4382C2B2753004F5F64 /* GoogleService-Info.plist */,
 				237BC7802C25BD710065225C /* PawseApp.swift */,
 				237BC7822C25BD710065225C /* ContentView.swift */,
-				23913EA42C2C3A42008A576F /* congratulations.json */,
-				23913EA82C2C4826008A576F /* assets */,
+				234AA65A2C2DB13000379E20 /* loading screen.json */,
+				23913EA02C2C3A32008A576F /* cemas homepage.json */,
+				23913EA22C2C3A38008A576F /* sedih homepage.json */,
+				235DC41D2C2A82A3004F5F64 /* Marah-2.json */,
+				235DC41B2C2A8299004F5F64 /* nangis-2.json */,
+				235DC41F2C2A82EA004F5F64 /* cemas-2.json */,
+				235DC4212C2A85B1004F5F64 /* lukis.json */,
+				23913E9E2C2C3A24008A576F /* marah homepage.json */,
+				23913EA92C2C4844008A576F /* congratulations.json */,
 				16DD30112C2C6A2F004681A2 /* Assets.xcassets */,
 				237BC7862C25BD730065225C /* Preview Content */,
 				235DC4172C2A6EC7004F5F64 /* Shader.metal */,
@@ -422,21 +440,6 @@
 				234AA6462C2DA51C00379E20 /* Audio.swift */,
 			);
 			path = utils;
-			sourceTree = "<group>";
-		};
-		23913EA82C2C4826008A576F /* assets */ = {
-			isa = PBXGroup;
-			children = (
-				23913EA02C2C3A32008A576F /* cemas homepage.json */,
-				23913EA22C2C3A38008A576F /* sedih homepage.json */,
-				235DC41D2C2A82A3004F5F64 /* Marah-2.json */,
-				235DC41B2C2A8299004F5F64 /* nangis-2.json */,
-				235DC41F2C2A82EA004F5F64 /* cemas-2.json */,
-				235DC4212C2A85B1004F5F64 /* lukis.json */,
-				23913E9E2C2C3A24008A576F /* marah homepage.json */,
-				23913EA92C2C4844008A576F /* congratulations.json */,
-			);
-			path = assets;
 			sourceTree = "<group>";
 		};
 		23913EAC2C2C5CF7008A576F /* punch */ = {
@@ -588,10 +591,10 @@
 				235DC4222C2A85B1004F5F64 /* lukis.json in Resources */,
 				23502DA52C2968CB00D7F42A /* GenerativeAI-Info.plist in Resources */,
 				16DD301A2C2C71D6004681A2 /* Gymnopede.mp3 in Resources */,
-				23913EA52C2C3A42008A576F /* congratulations.json in Resources */,
 				16DD30122C2C6A2F004681A2 /* Assets.xcassets in Resources */,
 				235DC41E2C2A82A3004F5F64 /* Marah-2.json in Resources */,
 				23913EA12C2C3A32008A576F /* cemas homepage.json in Resources */,
+				234AA65B2C2DB13000379E20 /* loading screen.json in Resources */,
 				16DD301C2C2C71D6004681A2 /* Spiegel.mp3 in Resources */,
 				23913E9F2C2C3A24008A576F /* marah homepage.json in Resources */,
 				235DC4202C2A82EA004F5F64 /* cemas-2.json in Resources */,
@@ -650,6 +653,7 @@
 				234AA6502C2DA63200379E20 /* ChallengeS4.swift in Sources */,
 				235DC4302C2AC46D004F5F64 /* ShoutViewModel.swift in Sources */,
 				234AA6472C2DA51C00379E20 /* Audio.swift in Sources */,
+				234AA65E2C2DB28600379E20 /* JournalingQuestView.swift in Sources */,
 				160B30662C2AAC530011E6D7 /* MoodView.swift in Sources */,
 				160B30672C2AAC530011E6D7 /* QuestView.swift in Sources */,
 				234AA6452C2DA1FA00379E20 /* TemplateJournal.swift in Sources */,

@@ -21,7 +21,7 @@ struct LoadingJournalView: View {
                 .frame(height: .infinity)
             VStack(alignment: .center, spacing: 10) {
                 Spacer()
-                LottieView(name: "loading screen").frame(width: 400, height: 400)
+                LottieView(name: "loading_screen").frame(width: 400, height: 400)
                 VStack {
                     Text("Loading...")
                         .font(.callout)

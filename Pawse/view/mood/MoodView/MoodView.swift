@@ -11,8 +11,13 @@ struct MoodView: View {
     @ObservedObject private var moodViewModel = MoodViewModel()
     var body: some View {
         VStack {
-            CatView(user: moodViewModel.user ?? User.empty, story: moodViewModel.currentStory ?? Story.empty)
-            QuestView(quests: moodViewModel.quests ?? [])
+            if moodViewModel.user != nil && moodViewModel.currentStory != nil {
+                
+                CatView(user: moodViewModel.user ?? User.empty, story: moodViewModel.currentStory ?? Story.empty)
+                QuestView(quests: moodViewModel.quests ?? [])
+            } else {
+                LoadingView()
+            }
         }
         .onAppear {
             moodViewModel.getLatestEmotion()

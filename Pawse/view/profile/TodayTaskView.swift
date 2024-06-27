@@ -71,5 +71,5 @@ struct CircularProgressView: View {
 }
 
 #Preview {
-    TodayTaskView()
+    TodayTaskView(completedTasks: 2, notCompletedTasks: 2)
 }

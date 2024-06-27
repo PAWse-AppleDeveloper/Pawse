@@ -75,5 +75,5 @@ struct MeditationS1View: View {
 }
 
 #Preview {
-    MeditationS1View()
+    MeditationS1View(quest: .empty)
 }

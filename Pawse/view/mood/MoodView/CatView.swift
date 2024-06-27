@@ -21,7 +21,7 @@ struct CatView: View {
         case "Anxiety":
             return "cemas homepage"
         default:
-            return "null"
+            return "sedih homepage"
         }
     }
     

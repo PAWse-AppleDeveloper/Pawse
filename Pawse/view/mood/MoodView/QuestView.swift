@@ -55,6 +55,8 @@ struct QuestView: View {
             ChallangeS1View(quest: quest)
         case "Sharing":
             SharingView(quest: quest)
+        case "Journal_Sad":
+            JournalingQuestView(quest: quest)
         default:
             Text("Unknown destination")
         }

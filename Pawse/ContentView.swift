@@ -41,6 +41,7 @@ struct ContentView: View {
             }
             .environmentObject(authViewModel)
         }
+        .navigationBarBackButtonHidden()
         .onAppear {
             UITabBar.appearance().backgroundColor = .white
         }
