@@ -20,6 +20,16 @@ struct QuestView: View {
                 VStack(alignment: .leading, spacing: 16) {
                     if quests.isEmpty {
                         DisabledCardView()
+                        Group {
+                            CardView(quest: .empty)
+                            CardView(quest: .empty)
+                            CardView(quest: .empty)
+                        }
+                        .overlay {
+                            Rectangle()
+                                .fill(.white)
+                        }
+                        .opacity(0.3)
                     }
                     else {
                         ForEach(quests) { quest in

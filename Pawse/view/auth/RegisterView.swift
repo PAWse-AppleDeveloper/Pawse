@@ -13,10 +13,14 @@ struct RegisterView: View {
     @State private var name: String = ""
     @State private var email: String = ""
     @State private var password: String = ""
+    @State private var navigateToLoginView: Bool = false
     @AppStorage("uid") var userID: String = ""
 
     var body: some View {
         VStack(spacing: 20) {
+            Image("auth")
+                .resizable()
+                .frame(width: 215, height: 250)
             HStack {
                 Text("Sign Up")
                     .font(.largeTitle)
@@ -82,6 +86,11 @@ struct RegisterView: View {
                     .frame(maxWidth: .infinity)
                     .background(Color.biruBTN)
                     .cornerRadius(10)
+            }
+            NavigationLink {
+                LoginView()
+            } label: {
+                Text("Sign In here")
             }
         }
         .padding()

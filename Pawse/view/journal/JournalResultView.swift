@@ -124,14 +124,16 @@ struct JournalResultView: View {
                 }
                 .padding()
             }
+            .navigationBarBackButtonHidden()
             .navigationDestination(isPresented: $navigateToLoadingJournalView) {
                 LoadingJournalView()
             }
         } else {
-            LoadingView()
+            ProgressView()
                 .onAppear{
                     analyze()
                 }
+                .navigationBarBackButtonHidden()
         }
 }
     

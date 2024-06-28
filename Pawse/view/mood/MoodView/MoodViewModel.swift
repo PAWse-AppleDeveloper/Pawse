@@ -29,6 +29,7 @@ class MoodViewModel: ObservableObject {
         } else {
             playSound(name: "Nintendogs Cats Music", extensionFile: "mp3")
         }
+        getLatestEmotion()
     }
     
     private func fetchProfile() {

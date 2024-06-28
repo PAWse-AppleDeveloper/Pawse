@@ -12,17 +12,11 @@ struct MoodView: View {
     
     var body: some View {
         VStack {
-            if moodViewModel.user != nil && moodViewModel.currentStory != nil {
-                HStack {
-                    Spacer()
-                    Image("PAWSE")
-                    Spacer()
-                }
-                .padding()
+            if moodViewModel.user != nil {
                 CatView(user: moodViewModel.user ?? User.empty, story: moodViewModel.currentStory ?? Story.empty)
                 QuestView(quests: moodViewModel.quests ?? [])
             } else {
-                LoadingView()
+                ProgressView()
             }
         }
         .onAppear {
@@ -32,7 +26,6 @@ struct MoodView: View {
             moodViewModel.stopSound()
         }
         .navigationBarBackButtonHidden(true)
-        .padding(.horizontal, 16)
     }
 }
 

@@ -56,8 +56,6 @@ struct CatView: View {
                 }
             }
             .background(Color(red: 0.92, green: 0.87, blue: 0.81))
-            .cornerRadius(40)
-            
         }
     }
 }

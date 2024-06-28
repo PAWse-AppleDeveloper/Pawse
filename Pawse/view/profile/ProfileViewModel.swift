@@ -20,6 +20,9 @@ class ProfileViewModel: ObservableObject {
     
     init() {
         self.fetchProfile()
+        self.getLatestEmotion()
+        print("Completed quest: \(completedQuests)")
+        print("Uncompleted quest: \(uncompletedQuests)")
     }
     
     private func fetchProfile() {
@@ -46,7 +49,8 @@ class ProfileViewModel: ObservableObject {
                         print("Error fetching the latest quests: \(error.localizedDescription)")
                     } else if let quests = quests {
                         self.quests = quests
-                        print(quests)
+                        self.completedQuests = quests.filter { $0.isCompleted }.count
+                        self.uncompletedQuests = quests.filter { !$0.isCompleted }.count
                     } else {
                         print("No quests found for today.")
                     }
@@ -55,11 +59,5 @@ class ProfileViewModel: ObservableObject {
                 print("No stories found for today.")
             }
         }
-    }
-    
-    public func updateQuestCounts() {
-        guard let quests = quests else { return }
-        self.completedQuests = quests.filter { $0.isCompleted }.count
-        self.uncompletedQuests = quests.filter { !$0.isCompleted }.count
     }
 }

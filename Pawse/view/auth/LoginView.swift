@@ -16,6 +16,9 @@ struct LoginView: View {
     
     var body: some View {
         VStack(spacing: 20) {
+            Image("auth")
+                .resizable()
+                .frame(width: 215, height: 250)
             HStack {
                 Text("Sign In")
                     .font(.largeTitle)
@@ -66,6 +69,7 @@ struct LoginView: View {
 
         }
         .padding()
+        .navigationBarBackButtonHidden()
     }
 }
 

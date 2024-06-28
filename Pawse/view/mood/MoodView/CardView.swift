@@ -67,11 +67,6 @@ struct DisabledCardView: View {
         HStack(alignment: .center, spacing: 24) {
             Image(systemName: "lock.fill")
                 .font(.system(size: 36))
-                .overlay {
-                    Rectangle()
-                        .fill(.black)
-                        .opacity(0.3)
-                }
             Text("Please start journaling first!")
                 .font(.system(size: 17))
                 .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)

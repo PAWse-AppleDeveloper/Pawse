@@ -16,8 +16,16 @@ class JournalViewModel: ObservableObject {
             switch result {
             case .success(let savedStory):
                 do {
-                    let questType = QuestType(rawValue: savedStory.emotion)
-                    try self.questService.createAutoQuests(type: questType!, storyId: savedStory.id!)
+                    guard let questType = QuestType(rawValue: savedStory.emotion) else {
+                        completion(.success(()))
+                        return
+                    }
+                    guard let storyId = savedStory.id else {
+                        let error = NSError(domain: "JournalViewModel", code: 1, userInfo: [NSLocalizedDescriptionKey: "Story ID is nil"])
+                        completion(.failure(error))
+                        return
+                    }
+                    try self.questService.createAutoQuests(type: questType, storyId: storyId)
                     completion(.success(()))
                 } catch {
                     completion(.failure(error))

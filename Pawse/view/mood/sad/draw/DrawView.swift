@@ -19,7 +19,7 @@ struct DrawView: View {
     @State private var lines: [Line] = []
     @State private var replacement: Color = .black
     @State private var timerRunning = true
-    @State private var timeRemaining = 300
+    @State private var timeRemaining = 2
     
     
     @ObservedObject private var drawViewModel = DrawViewModel()
@@ -67,7 +67,7 @@ struct DrawView: View {
             .padding()
             
             if timeRemaining > 0 {
-                ProgressView(value: Double(timeRemaining), total: 600)
+                ProgressView(value: Double(timeRemaining), total: Double(timeRemaining))
                     .progressViewStyle(LinearProgressViewStyle(tint: .blue))
                     .padding()
             } else {

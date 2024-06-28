@@ -8,8 +8,14 @@
 import Foundation
 import FirebaseAuth
 
+enum AuthState {
+    case Initialize
+    case Login
+    case Logout
+}
+
 class AuthenticationViewModel: ObservableObject {
-    @Published var isLoggedIn = false
+    @Published var authState: AuthState = .Initialize
         
     init() {
         self.checkUserLoggedIn()
@@ -17,13 +23,14 @@ class AuthenticationViewModel: ObservableObject {
     
     func checkUserLoggedIn() {
         Auth.auth().addStateDidChangeListener { auth, user in
-            self.isLoggedIn = user != nil
+            self.authState = user != nil ? .Login : .Logout
         }
     }
     
     func logout() {
         do {
             try Auth.auth().signOut()
+            authState = .Logout
         } catch let signOutError as NSError {
             print("Error signing out: %@", signOutError)
         }

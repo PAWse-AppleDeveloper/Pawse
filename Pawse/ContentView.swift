@@ -21,7 +21,11 @@ struct ContentView: View {
     var body: some View {
         Group {
             NavigationStack {
-                if authViewModel.isLoggedIn {
+                switch authViewModel.authState {
+                case .Initialize:
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle())
+                case .Login:
                     TabView {
                         Group {
                             MoodView()
@@ -30,14 +34,14 @@ struct ContentView: View {
                                     Text("Mood")
                                 }
                                 .tag(Tab.mood)
-
+                            
                             ShopView()
                                 .tabItem {
                                     Image(systemName: "music.note.house.fill")
                                     Text("Shop")
                                 }
                                 .tag(Tab.shop)
-
+                            
                             ProfileView()
                                 .tabItem {
                                     Image(systemName: "person.circle")
@@ -46,15 +50,14 @@ struct ContentView: View {
                                 .tag(Tab.profile)
                         }
                     }
-                } else {
+                case .Logout:
                     LoginView()
                 }
             }
-            .environmentObject(authViewModel)
-        }
-        .navigationBarBackButtonHidden()
-        .onAppear {
-            UITabBar.appearance().backgroundColor = .white
+            .navigationBarBackButtonHidden()
+            .onAppear {
+                UITabBar.appearance().backgroundColor = .white
+            }
         }
     }
 }
