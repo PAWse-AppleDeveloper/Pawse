@@ -48,7 +48,7 @@ struct QuestView: View {
             }
             .frame(height: 250) // Set the fixed height for the scrollable area
         }
-        .padding(0)
+        .padding(14)
         .frame(maxWidth: .infinity, alignment: .topLeading)
     }
     
