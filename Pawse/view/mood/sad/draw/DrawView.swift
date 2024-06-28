@@ -19,7 +19,7 @@ struct DrawView: View {
     @State private var lines: [Line] = []
     @State private var replacement: Color = .black
     @State private var timerRunning = true
-    @State private var timeRemaining = 2
+    @State private var timeRemaining = 15
     
     
     @ObservedObject private var drawViewModel = DrawViewModel()
@@ -76,15 +76,10 @@ struct DrawView: View {
                 } label: {
                     Text("Done")
                         .foregroundStyle(.white)
-                        .padding()
                         .frame(maxWidth: .infinity)
-                        .background(.green)
+                        .background(.biruTuaSlider)
                         .cornerRadius(16)
-                }
-//                    NavigationLink(destination: MoodView()) {
-//
-//                    }
-//                    .padding()
+                }.padding()
             }
         }
         .navigationBarBackButtonHidden()
