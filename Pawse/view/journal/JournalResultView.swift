@@ -138,11 +138,7 @@ struct JournalResultView: View {
 }
     
     private func analyze(){
-<<<<<<< HEAD
-        prompt = "in this journal shows what emotions *answers only 1 word with Anxiety or Sad or Angry:\(jurnal)"
-=======
         prompt = "in this journal shows what emotions *answers only 1 word with Anxiety or Sad or Angry :\(jurnal)"
->>>>>>> 6533de2 (profile safe)
         Task {
           // Generate text from the prompt
           do {
