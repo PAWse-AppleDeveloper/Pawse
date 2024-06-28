@@ -13,6 +13,15 @@ struct ProfileView: View {
         
     var body: some View {
         VStack(alignment: .leading) {
+            HStack {
+                Spacer()
+                Button {
+                    authViewModel.logout()
+                } label: {
+                    Image(systemName: "arrow.right.circle")
+                        .foregroundStyle(.blue)
+                }
+            }
             Profile(user: profileViewModel.user ?? User.empty)
                 .padding(.top, 20.0)
           
@@ -21,18 +30,6 @@ struct ProfileView: View {
                 .padding(.top, 20.0)
             Spacer()
         }
-        .toolbar(content: {
-            ToolbarItem(placement: .topBarTrailing) {
-                HStack {
-                    Button {
-                        authViewModel.logout()
-                    } label: {
-                        Image(systemName: "arrow.right.circle")
-                            .foregroundStyle(.blue)
-                    }
-                }
-            }
-        })
         .padding()
         .navigationBarBackButtonHidden()
     }
